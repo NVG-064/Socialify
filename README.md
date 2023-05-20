@@ -13,7 +13,7 @@ Semua orang dapat menjadi kolaborator, termasuk hipster, hustler, dan mentor. Hu
 
 Tetapi, jika ingin menggunakan semua branch, diperbolehkan, selama tidak membingungkan kedua belah pihak.
 
-# Cara Clone Branch
+# Tutorial Tentang Git (Termasuk Cara Clone Branch)
 Untuk **divisi web**, [klik di sini]()<br>
 Untuk **divisi mobile**, [klik di sini]()
 
