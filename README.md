@@ -1,7 +1,9 @@
 # Tentang
+
 Socialify merupakan sebuah software yang dapat mempertemukan komunitas di seluruh dunia.
 
 # Kolaborator
+
 Semua orang dapat menjadi kolaborator, termasuk hipster, hustler, dan mentor. Hubungi project owner sesegera mungkin untuk mendapatkan akses.
 
 # Inisiasi Pertama Kali
@@ -21,7 +23,7 @@ Note, jika diminta untuk sign-in, silahkan sign-in dengan akun yang sudah ada
 2. Lalu buat branch baru bernama `dev_web` dengan menjalankan perintah ini:<br>
 `git checkout -b dev_mobile`
 
-Perintah di atas sama seperti membuat brach baru, kemudian beralih ke branch baru bernama `dev_mobile`
+Perintah di atas sama seperti membuat branch baru, kemudian beralih ke branch baru bernama `dev_mobile`
 
 3. Dapatkan semua perubahan dari repository terhadap branch `dev_mobile` dengan cara:<br>
 `git pull origin dev_mobile`
@@ -29,12 +31,32 @@ Perintah di atas sama seperti membuat brach baru, kemudian beralih ke branch bar
 4. Kita perlu membuat branch baru yaitu `stable_mobile` dengan menjalankan perintah ini:<br>
 `git checkout -b stable_mobile`
 
-Perintah di atas sama seperti membuat brach baru, kemudian beralih ke branch baru bernama `stable_mobile`
+Perintah di atas sama seperti membuat branch baru, kemudian beralih ke branch baru bernama `stable_mobile`
 
 5. Dapatkan semua perubahan dari repository terhadap branch `stable_mobile` dengan cara:<br>
 `git pull origin stable_mobile`
 
 6. Selesai. Sekarang tinggal commit dan push sesuka hati. Happy coding.
+
+# Pull Branch
+
+Untuk mem-pull branch `dev_mobile`, pindah ke branch `dev_mobile` terlebih dahulu:<br>
+`git checkout dev_mobile`
+
+Kemudian gunakan perintah berikut:<br>
+`git pull origin dev_mobile`
+
+Jika ingin menggunakan `fetch` daripada `pull`, maka ganti perintah `pull` menjadi `fetch`
+
+# Push ke Branch dev_mobile
+
+1. Pindah ke branch `dev_mobile` terlebih dahulu:<br>
+`git checkout dev_mobile`
+
+2. Pindahkan file yang ingin di-commit ke staged area dengan perintah `git add`
+3. Commit dan buat commit message dengan `git commit -m`
+4. Push ke branch dev_mobile dengan perintah:<br>
+`git push origin dev_mobile`
 
 # Informasi Branch
 
