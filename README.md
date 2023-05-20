@@ -14,8 +14,8 @@ Semua orang dapat menjadi kolaborator, termasuk hipster, hustler, dan mentor. Hu
 Tetapi, jika ingin menggunakan semua branch, diperbolehkan, selama tidak membingungkan kedua belah pihak.
 
 # Tutorial Tentang Git (Termasuk Cara Clone Branch)
-Untuk **divisi web**, [klik di sini]()<br>
-Untuk **divisi mobile**, [klik di sini]()
+Untuk **divisi web**, [klik di sini](https://github.com/NVG-064/Socialify/tree/stable_web#inisiasi-pertama-kali)<br>
+Untuk **divisi mobile**, [klik di sini](https://github.com/NVG-064/Socialify/tree/stable_mobile#inisiasi-pertama-kali)
 
 # Informasi Branch
 Terdapat 5 branch yang tersedia, yaitu:
