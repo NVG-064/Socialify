@@ -44,4 +44,4 @@ Sebuah branch untuk nampung semua hal-hal yang berkaitan dengan mobile apps dari
 
 2. stable_mobile
 
-Nggak jauh beda sama nomor 2. Tapi branch ini sangat direkomendasikan untuk menyimpan semua project yang benar benar aman dan nggak ada error sama sekali ketika dicompile. Jadi kalo branch `dev_mobile` ada masalah, bisa balik ke tempat awal.
+Nggak jauh beda sama nomor 1. Tapi branch ini sangat direkomendasikan untuk menyimpan semua project yang benar benar aman dan nggak ada error sama sekali ketika dicompile. Jadi kalo branch `dev_mobile` ada masalah, bisa balik ke tempat awal.
