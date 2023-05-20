@@ -7,10 +7,10 @@ Semua orang dapat menjadi kolaborator, termasuk hipster, hustler, dan mentor. Hu
 # Inisiasi Pertama Kali
 
 Pra-syarat:
-1. [git](https://git-scm.com/downloads) sudah terpasang*
-2. Sudah mengatur `global config` untuk 'user name' dan 'user email'*
+1. [git](https://git-scm.com/downloads) sudah terpasang
+2. Sudah mengatur [global config untuk 'user name' dan 'user email'](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 
-* Jika belum, caranya akan diberitahu nanti. Jadi, silahkan langsung tanyakan caranya. Akan dipandu secara langsung supaya mengerti secara detail perihal apa yang dilakukan.<br>
+Jika belum, caranya akan diberitahu nanti. Jadi, silahkan langsung tanyakan caranya. Akan dipandu secara langsung supaya mengerti secara detail perihal apa yang dilakukan.<br>
 
 Cara:<br>
 1. Buka git bash atau terminal kesukaan kalian. Lalu clone repository nya dengan menjalankan perintah ini:<br>
@@ -38,7 +38,7 @@ Perintah di atas sama seperti membuat brach baru, kemudian beralih ke branch bar
 
 # Informasi Branch
 
-1. dev_mobile<br>
+1. dev_mobile
 
 Sebuah branch untuk nampung semua hal-hal yang berkaitan dengan mobile apps dari Socialify. Branch ini juga digunakan untuk membahas hal-hal teknis dari Socialify, misalnya dokumentasi dan cara compile nya. Branch ini sangat direkomendasikan untuk menyimpan semua progress dari mobile apps Socialify, misalnya karena takut progress ilang karena kejadian tidak disangka-sangka. Contoh lainnya adalah mau coba coba, tapi takut ada yang nggak bener ketika dipush ke repository.
 
