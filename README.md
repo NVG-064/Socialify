@@ -29,7 +29,7 @@ Sebuah branch untuk nampung semua hal-hal yang berkaitan dengan mobile apps dari
 
 3. stable_mobile
 
-Nggak jauh beda sama nomor 2. Tapi branch ini sangat direkomendasikan untuk menyimpan semua project yang benar benar aman dan nggak ada error sama sekali ketika dicompile. Jadi kalo branch dev_mobile ada masalah, bisa balik ke tempat awal.
+Nggak jauh beda sama nomor 2. Tapi branch ini sangat direkomendasikan untuk menyimpan semua project yang benar benar aman dan nggak ada error sama sekali ketika dicompile. Jadi kalo branch `dev_mobile` ada masalah, bisa balik ke tempat awal.
 
 4. dev_web
 
@@ -37,4 +37,4 @@ Sebuah branch untuk nampung semua hal-hal yang berkaitan dengan web dari Sociali
 
 5. stable_web
 
-Nggak jauh beda sama nomor 4. Tapi branch ini sangat direkomendasikan untuk menyimpan semua project yang benar benar aman dan nggak ada error sama sekali ketika dicompile. Jadi kalo branch dev_web ada masalah, bisa balik ke tempat awal.
+Nggak jauh beda sama nomor 4. Tapi branch ini sangat direkomendasikan untuk menyimpan semua project yang benar benar aman dan nggak ada error sama sekali ketika dicompile. Jadi kalo branch `dev_web` ada masalah, bisa balik ke tempat awal.
