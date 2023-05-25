@@ -38,13 +38,23 @@ Perintah di atas sama seperti membuat branch baru, kemudian beralih ke branch ba
 
 6. Selesai. Sekarang tinggal commit dan push sesuka hati. Happy coding.
 
-# Pull Branch
+# Pull Branch stable_mobile
 
 Untuk mem-pull branch `stable_mobile`, pindah ke branch `stable_mobile` terlebih dahulu:<br>
 `git checkout stable_mobile`
 
 Kemudian gunakan perintah berikut:<br>
 `git pull origin stable_mobile`
+
+Jika ingin menggunakan `fetch` daripada `pull`, maka ganti perintah `pull` menjadi `fetch`
+
+# Pull Branch dev_mobile
+
+Untuk mem-pull branch `dev_mobile`, pindah ke branch `dev_mobile` terlebih dahulu:<br>
+`git checkout dev_mobile`
+
+Kemudian gunakan perintah berikut:<br>
+`git pull origin dev_mobile`
 
 Jika ingin menggunakan `fetch` daripada `pull`, maka ganti perintah `pull` menjadi `fetch`
 
@@ -56,6 +66,29 @@ Jika ingin menggunakan `fetch` daripada `pull`, maka ganti perintah `pull` menja
 2. Pindahkan file yang ingin di-commit ke staged area dengan perintah `git add`
 3. Commit dan buat commit message dengan `git commit -m`
 4. Push ke branch stable_mobile dengan perintah:<br>
+`git push origin stable_mobile`
+
+# Push ke Branch dev_mobile
+
+1. Pindah ke branch `dev_mobile` terlebih dahulu:<br>
+`git checkout dev_mobile`
+
+2. Pindahkan file yang ingin di-commit ke staged area dengan perintah `git add`
+3. Commit dan buat commit message dengan `git commit -m`
+4. Push ke branch dev_mobile dengan perintah:<br>
+`git push origin dev_mobile`
+
+# Merge Branch dev_mobile ke stable_mobile
+
+1. Pastikan branch `dev_mobile` sudah dilakukan commit dan push
+2. Pindah ke branch `stable_mobile` terlebih dahulu:<br>
+`git checkout stable_mobile`
+3. Merge branch `dev_mobile` dengan cara:<br>
+`git merge dev_mobile`
+4. Perhatikan output yang dihasilkan. Jika terdapat MERGE CONFLICT, baca [di sini](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line). Jika tidak ada error maka langsung ke langkah selanjutnya
+5. Buat commit messagenya, dengan cara:<br>
+`git commit -m`
+6. Push perubahannya ke branch `stable_mobile` dengan cara:<br>
 `git push origin stable_mobile`
 
 # Informasi Branch
