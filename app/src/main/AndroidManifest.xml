@@ -13,6 +13,22 @@
         android:theme="@style/Theme.Socialify"
         tools:targetApi="31">
         <activity
+            android:name=".AppStatementThree"
+            android:exported="false"
+            android:theme="@style/AppStatement" />
+        <activity
+            android:name=".AppStatementTwo"
+            android:exported="false"
+            android:theme="@style/AppStatement" />
+        <activity
+            android:name=".AppStatementOne"
+            android:exported="false"
+            android:theme="@style/AppStatement" />
+        <activity
+            android:name=".WelcomeScreenActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.Socialify" />
+        <activity
             android:name=".SplashScreenActivity"
             android:exported="true"
             android:theme="@style/AppSplashScreen">
@@ -24,8 +40,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>

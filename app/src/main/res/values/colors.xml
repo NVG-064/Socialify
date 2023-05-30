@@ -4,4 +4,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="app_bg_color">#FF20043F</color>
+    <color name="welcome_screen_next_btn">#a1ffbe3c</color>
+    <color name="progress_bar_bg">#FFCFBEE9</color>
+    <color name="progress_bar_indicator">#FF6E3CBC</color>
 </resources>

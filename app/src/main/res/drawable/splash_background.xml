@@ -3,4 +3,8 @@
 
 <!-- Animated drawable using Bitmap -->
 
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/socialify_text" />
+    </item>
+
 </selector>

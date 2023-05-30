@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Socialify</string>
+    <string name="welcome_screen_next">Sentuh untuk melanjutkan</string>
+    <string name="next_button">Next</string>
+    <string name="app_statement_one">Temukan berbagai komunitas dengan hobi dan minat yang sama</string>
+    <string name="app_statement_two">Tampilan review kepengurusan dan form pengeluaran</string>
+    <string name="app_statement_three">Tersedia berbagai event yang menarik</string>
+
 </resources>
