@@ -34,15 +34,41 @@
         app:layout_constraintTop_toBottomOf="@+id/appSTImageView" />
 
     <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
-        android:layout_width="100dp"
+        android:id="@+id/roundCornerProgressBar5"
+        android:layout_width="30dp"
         android:layout_height="5dp"
-        android:paddingStart="24dp"
+        android:layout_marginStart="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appSTDescTextView"
-        app:rcProgress="100"
-        app:rcMax="100"
         app:rcBackgroundColor="@color/progress_bar_bg"
+        app:rcMax="100"
+        app:rcProgress="100"
+        app:rcProgressColor="@color/app_bg_color" />
+
+    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+        android:id="@+id/roundCornerProgressBar6"
+        android:layout_width="30dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/roundCornerProgressBar5"
+        app:layout_constraintTop_toBottomOf="@+id/appSTDescTextView"
+        app:rcBackgroundColor="@color/progress_bar_bg"
+        app:rcMax="100"
+        app:rcProgress="100"
+        app:rcProgressColor="@color/app_bg_color" />
+
+    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+        android:layout_width="30dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/roundCornerProgressBar6"
+        app:layout_constraintTop_toBottomOf="@+id/appSTDescTextView"
+        app:rcBackgroundColor="@color/progress_bar_bg"
+        app:rcMax="100"
+        app:rcProgress="100"
         app:rcProgressColor="@color/app_bg_color" />
 
     <Button
