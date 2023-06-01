@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+.bg-login {
+  background: #20043F;
+}
+
+.header-text {
+  font-family: 'Jockey One', sans-serif;
+      -webkit-text-stroke: thin black;
+}
+
+.coolinput {
+  display: flex;
+  flex-direction: column;
+}
+
+.coolinput label.text {
+  font-size: 0.85rem;
+  color: #fff;
+  font-weight: 700;
+  position: relative;
+  top: 0.7rem;
+  margin: 0 0 0 1.25rem;
+  padding: 0 10px;
+  width: fit-content;
+}
+
+.coolinput input:is([type=email], [type=password]).input {
+  padding: 1rem 10px;
+  font-size: 0.75rem;
+  border: 2px #fff solid;
+  border-radius: 5px;
+}
+
+.coolinput input:is([type=email], [type=password]).input:focus {
+  outline: none;
+}
+
+.line::before{
+  content: '';
+  position: absolute;
+  width: 5rem;
+  height: 1px;
+  background-color: #fff;
+  top: 50%;
+  left: -7rem;
+}
+
+.line::after {
+  content: '';
+  position: absolute;
+  width: 5rem;
+  height: 1px;
+  background-color: #fff;
+  top: 50%;
+  right: -7rem;
+}
+
+.btn-auth {
+  width: 90%;
+}
+
+@media (width >= 900px) {
+  .btn-auth {
+    width: 50%;
+  }
+}
