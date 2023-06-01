@@ -1,0 +1,34 @@
+package com.infinity.socialify
+
+import android.annotation.SuppressLint
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.view.WindowManager
+import android.widget.TextView
+
+class SignInActivity : AppCompatActivity() {
+
+  private lateinit var clickableSignUpNowTextView: TextView
+  private lateinit var forgotPasswordSuggestionTextView: TextView
+
+  @SuppressLint("MissingInflatedId")
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+
+    window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+
+    setContentView(R.layout.activity_sign_in)
+
+    forgotPasswordSuggestionTextView = findViewById(R.id.forgotPasswordSuggestionTextView)
+    clickableSignUpNowTextView = findViewById(R.id.clickableSignUpNowTextView)
+
+    clickableSignUpNowTextView.setOnClickListener {
+      startActivity(Intent(this, SignUpActivity::class.java))
+    }
+
+    forgotPasswordSuggestionTextView.setOnClickListener {
+      startActivity(Intent(this, ForgotPasswordActivity::class.java))
+    }
+  }
+}

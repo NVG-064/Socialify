@@ -8,4 +8,5 @@
     <color name="secondary_color">#FFBE3C</color>
     <color name="progress_bar_bg">#FFCFBEE9</color>
     <color name="tertiary_color">#FF6E3CBC</color>
+    <color name="hint_edit_text">#59FFFFFF</color>
 </resources>
