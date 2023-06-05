@@ -5,12 +5,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
+import android.widget.Button
 import android.widget.TextView
 
 class SignInActivity : AppCompatActivity() {
 
   private lateinit var clickableSignUpNowTextView: TextView
   private lateinit var forgotPasswordSuggestionTextView: TextView
+  private lateinit var signInSIButton: Button
 
   @SuppressLint("MissingInflatedId")
   override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +24,7 @@ class SignInActivity : AppCompatActivity() {
 
     forgotPasswordSuggestionTextView = findViewById(R.id.forgotPasswordSuggestionTextView)
     clickableSignUpNowTextView = findViewById(R.id.clickableSignUpNowTextView)
+    signInSIButton = findViewById(R.id.signInSIButton)
 
     clickableSignUpNowTextView.setOnClickListener {
       startActivity(Intent(this, SignUpActivity::class.java))
@@ -29,6 +32,10 @@ class SignInActivity : AppCompatActivity() {
 
     forgotPasswordSuggestionTextView.setOnClickListener {
       startActivity(Intent(this, ForgotPasswordActivity::class.java))
+    }
+
+    signInSIButton.setOnClickListener {
+      startActivity(Intent(this, MainActivity::class.java))
     }
   }
 }

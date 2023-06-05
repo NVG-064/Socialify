@@ -43,4 +43,6 @@
     <string name="code_confirmation">Konfirmasi Kode</string>
     <string name="code_confirmation_hint">Masukkan kode konfirmasi Anda</string>
     <string name="change_password">Ganti Kata Sandi</string>
+    <string name="success_change_password">Kata sandi berhasil diganti</string>
+    <string name="go_to_sign_in">Pergi ke laman Masuk</string>
 </resources>
