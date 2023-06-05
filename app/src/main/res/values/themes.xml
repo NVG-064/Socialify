@@ -1,9 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Socialify" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Socialify" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:windowBackground">@color/white</item>
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<!--         <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.Socialify" parent="Base.Theme.Socialify" />
+    <style name="AppSplashScreen" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@color/primary_color</item>
+    </style>
+
+    <style name="Theme.Socialify" parent="Base.Theme.Socialify">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="AppStatement" parent="Theme.Material3.Light">
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
 </resources>
