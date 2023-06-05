@@ -143,6 +143,7 @@
         app:layout_constraintTop_toBottomOf="@+id/confirmPasswordTitleTextView" />
 
     <Button
+        android:id="@+id/signUpSUButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"

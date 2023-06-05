@@ -9,7 +9,6 @@ import android.widget.Button
 import android.widget.TextView
 
 class SignInActivity : AppCompatActivity() {
-
   private lateinit var clickableSignUpNowTextView: TextView
   private lateinit var forgotPasswordSuggestionTextView: TextView
   private lateinit var signInSIButton: Button
