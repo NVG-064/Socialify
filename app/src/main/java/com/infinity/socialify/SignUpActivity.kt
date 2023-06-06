@@ -4,72 +4,103 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextUtils
+import android.util.Patterns
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.infinity.socialify.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity() {
+  private lateinit var binding: ActivitySignUpBinding
+  private lateinit var auth: FirebaseAuth
 
-  private val db = Firebase.firestore
-
-  private lateinit var clickableSignInNowTextView: TextView
-  private lateinit var signUpSUButton: Button
-  private lateinit var nameInputEditText: EditText
-  private lateinit var emailInputEditText: EditText
-  private lateinit var passwordInputEditText: EditText
-  private lateinit var confirmPasswordInputEditText: EditText
+//  private lateinit var clickableSignInNowTextView: TextView
+//  private lateinit var signUpSUButton: Button
+//  private lateinit var nameInputEditText: EditText
+//  private lateinit var emailInputEditText: EditText
+//  private lateinit var passwordInputEditText: EditText
+//  private lateinit var confirmPasswordInputEditText: EditText
 
   @SuppressLint("MissingInflatedId")
   override fun onCreate(savedInstanceState: Bundle?) {
+    binding = ActivitySignUpBinding.inflate(layoutInflater)
     super.onCreate(savedInstanceState)
 
     window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
-    setContentView(R.layout.activity_sign_up)
+    val view = binding.root
+    setContentView(view)
 
-    clickableSignInNowTextView = findViewById(R.id.clickableSignInNowTextView)
-    signUpSUButton = findViewById(R.id.signUpSUButton)
-    nameInputEditText = findViewById(R.id.nameInputEditText)
-    emailInputEditText = findViewById(R.id.emailInputEditText)
-    passwordInputEditText = findViewById(R.id.passwordInputEditText)
-    confirmPasswordInputEditText = findViewById(R.id.confirmPasswordInputEditText)
+    auth = FirebaseAuth.getInstance()
 
-    clickableSignInNowTextView.setOnClickListener {
+    binding.clickableSignInNowTextView.setOnClickListener {
       startActivity(Intent(this, SignInActivity::class.java))
     }
 
-    signUpSUButton.setOnClickListener {
-      val username = nameInputEditText.text.toString()
-      val email = emailInputEditText.text.toString()
-      val password = passwordInputEditText.text.toString()
-      val rePassword = confirmPasswordInputEditText.text.toString()
+    binding.signUpSUButton.setOnClickListener {
+      val username = binding.nameInputEditText.text.toString()
+      val email = binding.emailInputEditText.text.toString()
+      val password = binding.passwordInputEditText.text.toString()
+      val rePassword = binding.confirmPasswordInputEditText.text.toString()
 
-      if (TextUtils.isEmpty(username) || TextUtils.isEmpty(email) || TextUtils.isEmpty(password) || TextUtils.isEmpty(rePassword)) {
-        Toast.makeText(this, "Please fill the blank field", Toast.LENGTH_SHORT).show()
-      } else {
-        if (password == rePassword) {
-          val account = hashMapOf(
-            "username" to username,
-            "email" to email,
-            "pass" to password
-          )
+      if (username.isEmpty()) {
+        binding.nameInputEditText.error = "Tidak boleh kosong"
+        binding.nameInputEditText.requestFocus()
+        return@setOnClickListener
+      }
 
-          db.collection("accounts")
-            .add(account)
-            .addOnFailureListener {
-              e -> Toast.makeText(this, "$e", Toast.LENGTH_SHORT).show()
-            }
+      if (email.isEmpty()) {
+        binding.emailInputEditText.error = "Tidak boleh kosong"
+        binding.emailInputEditText.requestFocus()
+        return@setOnClickListener
+      }
 
-          startActivity(Intent(this, MainActivity::class.java))
+      if (password.isEmpty()) {
+        binding.passwordInputEditText.error = "Tidak boleh kosong"
+        binding.passwordInputEditText.requestFocus()
+        return@setOnClickListener
+      }
+
+      if (rePassword.isEmpty()) {
+        binding.confirmPasswordInputEditText.error = "Tidak boleh kosong"
+        binding.confirmPasswordInputEditText.requestFocus()
+        return@setOnClickListener
+      }
+
+      if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+        binding.emailInputEditText.error = "Email tidak valid"
+        binding.emailInputEditText.requestFocus()
+        return@setOnClickListener
+      }
+
+      if (password.length < 8) {
+        binding.passwordInputEditText.error = "Setidaknya berisi 8 karakter, angka, atau karakter spesial"
+        binding.passwordInputEditText.requestFocus()
+        return@setOnClickListener
+      }
+
+      if (password != rePassword) {
+        binding.confirmPasswordInputEditText.error = "Kata sandi tidak cocok"
+        binding.confirmPasswordInputEditText.requestFocus()
+        return@setOnClickListener
+      }
+
+      registerFirebase(email, password)
+    }
+  }
+
+  private fun registerFirebase(email: String, password: String) {
+    auth.createUserWithEmailAndPassword(email, password)
+      .addOnCompleteListener(this) {
+        if (it.isSuccessful) {
+          Toast.makeText(this, "Berhasil daftar", Toast.LENGTH_SHORT).show()
+          startActivity(Intent(this, SignInActivity::class.java))
         } else {
-          Toast.makeText(this, "Password doesn't match", Toast.LENGTH_SHORT).show()
+          Toast.makeText(this, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
         }
       }
-    }
   }
 }
