@@ -98,6 +98,9 @@ class SignUpActivity : AppCompatActivity() {
         if (it.isSuccessful) {
           Toast.makeText(this, "Berhasil daftar", Toast.LENGTH_SHORT).show()
           startActivity(Intent(this, SignInActivity::class.java))
+        } else if (it.exception?.message!!.contains("already in use", true)) {
+          binding.emailInputEditText.error = "Email sudah digunakan"
+          binding.emailInputEditText.requestFocus()
         } else {
           Toast.makeText(this, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
         }
