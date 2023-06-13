@@ -6,9 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.view.WindowManager
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.infinity.socialify.databinding.ActivitySignUpBinding
@@ -31,8 +28,7 @@ class SignUpActivity : AppCompatActivity() {
 
     window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
-    val view = binding.root
-    setContentView(view)
+    setContentView(binding.root)
 
     auth = FirebaseAuth.getInstance()
 
@@ -88,11 +84,11 @@ class SignUpActivity : AppCompatActivity() {
         return@setOnClickListener
       }
 
-      registerFirebase(email, password)
+      signUpFirebase(email, password)
     }
   }
 
-  private fun registerFirebase(email: String, password: String) {
+  private fun signUpFirebase(email: String, password: String) {
     auth.createUserWithEmailAndPassword(email, password)
       .addOnCompleteListener(this) {
         if (it.isSuccessful) {

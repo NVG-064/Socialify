@@ -1,4 +1,5 @@
 <resources>
+    <string name="web_client_id">23662297536-327eqk9vhll7o7q86qgsrlhmm8pel0u0.apps.googleusercontent.com</string>
     <string name="app_name">Socialify</string>
     <string name="welcome_screen_next">Sentuh untuk melanjutkan</string>
     <string name="next_button">Selanjutnya</string>
