@@ -9,4 +9,6 @@
     <color name="progress_bar_bg">#FFCFBEE9</color>
     <color name="tertiary_color">#FF6E3CBC</color>
     <color name="hint_edit_text">#59FFFFFF</color>
+    <color name="btn_peringkat">#BA4AFB</color>
+    <color name="another_color">#361D52</color>
 </resources>
