@@ -15,6 +15,11 @@
         android:theme="@style/Theme.Socialify"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/HomeTheme"
+            android:label="@string/title_activity_main" />
+        <activity
             android:name=".SuccessChangePasswordActivity"
             android:exported="false" />
         <activity
@@ -61,9 +66,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
     </application>
 
 </manifest>

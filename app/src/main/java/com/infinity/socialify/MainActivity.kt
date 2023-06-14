@@ -1,41 +1,35 @@
 package com.infinity.socialify
 
-import android.annotation.SuppressLint
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import com.google.firebase.auth.FirebaseAuth
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.infinity.socialify.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
-    private lateinit var auth: FirebaseAuth
+  private lateinit var binding: ActivityMainBinding
 
-//    private lateinit var myNewTextView: TextView
-//    private lateinit var customMyTextView: TextView
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
 
-    @SuppressLint("MissingInflatedId")
-    override fun onCreate(savedInstanceState: Bundle?) {
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        super.onCreate(savedInstanceState)
-        setContentView(binding.root)
+    binding = ActivityMainBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
-        auth = FirebaseAuth.getInstance()
+    val navView: BottomNavigationView = binding.navView
 
-        binding.signOutMaterialButton.setOnClickListener {
-            Toast.makeText(this, "Signing out ${auth.currentUser!!.email.toString()}", Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this, SignInActivity::class.java))
-        }
-
-//        myNewTextView = findViewById(R.id.myNewTextView)
-//        customMyTextView = findViewById(R.id.customMyTextView)
-//
-//        val email = intent.getStringExtra("email")
-//        val displayName = intent.getStringExtra("name")
-//
-//        myNewTextView.text = email
-//        customMyTextView.text = displayName
-    }
+    val navController = findNavController(R.id.nav_host_fragment_activity_main)
+    // Passing each menu ID as a set of Ids because each
+    // menu should be considered as top level destinations.
+    val appBarConfiguration = AppBarConfiguration(
+      setOf(
+        R.id.navigation_home, R.id.navigation_search, R.id.navigation_notifications, R.id.navigation_profile
+      )
+    )
+    setupActionBarWithNavController(navController, appBarConfiguration)
+    navView.setupWithNavController(navController)
+  }
 }

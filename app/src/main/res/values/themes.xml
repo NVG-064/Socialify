@@ -19,4 +19,8 @@
         <item name="android:windowLightStatusBar">true</item>
     </style>
 
+    <style name="HomeTheme" parent="Theme.Material3.Light">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
 </resources>
