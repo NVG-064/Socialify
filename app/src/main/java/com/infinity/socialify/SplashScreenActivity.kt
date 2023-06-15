@@ -41,6 +41,7 @@ class SplashScreenActivity : AppCompatActivity() {
     if (account != null) {
       Toast.makeText(this, auth.currentUser!!.email.toString(), Toast.LENGTH_SHORT).show()
       startActivity(Intent(this, MainActivity::class.java))
+      finish()
     } else {
       Handler().postDelayed(Runnable {
         startActivity(Intent(this, WelcomeScreenActivity::class.java))
