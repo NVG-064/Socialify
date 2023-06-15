@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CommunityFragment">
+
+    <ImageView
+        android:id="@+id/img_profil_user"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:src="@drawable/profil_user"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="15dp"/>
+    
+    <EditText
+        android:id="@+id/et_buat_diskusi"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:hint="Buat Diskusi"
+        android:textStyle="italic"
+        app:layout_constraintStart_toEndOf="@+id/img_profil_user"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/img_tambah_gambar"
+        android:layout_margin="12dp" />
+    <ImageView
+        android:id="@+id/img_tambah_gambar"
+        android:layout_width="43dp"
+        android:layout_height="39dp"
+        android:src="@drawable/tambah_gambar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="15dp"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/primary_color"
+        app:layout_constraintTop_toBottomOf="@id/et_buat_diskusi"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/btn_urut_berdasarkan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:src="@drawable/urut_berdasarkan"
+            android:layout_marginRight="15dp"/>
+        <TextView
+            android:id="@+id/tv_urut_berdasarkan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Urut Berdasarkan"
+            android:textColor="@color/white"
+            android:layout_marginRight="45dp"
+            android:layout_gravity="right|center_vertical"/>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
