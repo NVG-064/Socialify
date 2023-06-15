@@ -9,6 +9,7 @@ import android.view.WindowManager
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.infinity.socialify.databinding.ActivitySignUpBinding
+import com.infinity.socialify.ui.ExploreActivity
 
 class SignUpActivity : AppCompatActivity() {
   private lateinit var binding: ActivitySignUpBinding
@@ -33,7 +34,8 @@ class SignUpActivity : AppCompatActivity() {
     auth = FirebaseAuth.getInstance()
 
     binding.clickableSignInNowTextView.setOnClickListener {
-      startActivity(Intent(this, SignInActivity::class.java))
+      startActivity(Intent(this, ExploreActivity::class.java))
+      finish()
     }
 
     binding.signUpSUButton.setOnClickListener {
@@ -93,7 +95,8 @@ class SignUpActivity : AppCompatActivity() {
       .addOnCompleteListener(this) {
         if (it.isSuccessful) {
           Toast.makeText(this, "Berhasil daftar", Toast.LENGTH_SHORT).show()
-          startActivity(Intent(this, SignInActivity::class.java))
+          startActivity(Intent(this, ExploreActivity::class.java))
+          finish()
         } else if (it.exception?.message!!.contains("already in use", true)) {
           binding.emailInputEditText.error = "Email sudah digunakan"
           binding.emailInputEditText.requestFocus()

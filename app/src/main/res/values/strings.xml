@@ -50,10 +50,44 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_profile">Profil</string>
     <string name="description_search_fragment">Temukan berbagai komunitas di sini</string>
     <string name="keyword_insert_hint">Masukkan kata kunci</string>
     <string name="search">Cari</string>
+    <string name="explore">Jelajahi</string>
+    <string name="explore_description">PIlih hobi dan minat yang sesuai dengan kamu</string>
+    <string name="skip">Lewati</string>
+    <string name="template_explore_title">Explore Title</string>
+
+    <string-array name="data_explore_image">
+        <item>@drawable/explore_games</item>
+        <item>@drawable/explore_social_politics</item>
+        <item>@drawable/explore_photograph</item>
+        <item>@drawable/explore_programming</item>
+        <item>@drawable/explore_horror_mystery</item>
+        <item>@drawable/explore_pets</item>
+        <item>@drawable/explore_natures</item>
+        <item>@drawable/explore_art_cartoons</item>
+        <item>@drawable/explore_foods</item>
+        <item>@drawable/explore_healthy</item>
+        <item>@drawable/explore_sports</item>
+        <item>@drawable/explore_film_books</item>
+    </string-array>
+
+    <string-array name="data_explore_title">
+        <item>Permainan</item>
+        <item>Sosial dan Politik</item>
+        <item>Fotografi</item>
+        <item>Pemrograman</item>
+        <item>Horor dan Misteri</item>
+        <item>Hewan Peliharaan</item>
+        <item>Pecinta Alam</item>
+        <item>Seni dan Kartun</item>
+        <item>Makanan</item>
+        <item>Kesehatan</item>
+        <item>Olahraga</item>
+        <item>Film dan Buku</item>
+    </string-array>
+
 </resources>
