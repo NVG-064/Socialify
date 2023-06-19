@@ -1,14 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuKomunitasFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MenuKomunitasFragment"
+    android:background="@color/primary_color">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.cardview.widget.CardView
+        android:id="@+id/clicked_community"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="170dp"
+        app:cardBackgroundColor="@color/another_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/img_komunitas"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/nama_komunitas"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"/>
+        <FrameLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="40dp">
+            <TextView
+                android:id="@+id/nama_komunitas"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Programmer Forum"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <TextView
+                android:id="@+id/jumlah_anggota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7300 anggota"
+                android:textColor="@color/white"
+                android:layout_marginTop="35dp"
+                android:textSize="18dp"/>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/rating_komunitas"
+                android:layout_marginTop="67dp"/>
+            <TextView
+                android:id="@+id/rating_komunitas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.6"
+                android:textColor="@color/white"
+                android:layout_marginTop="66dp"
+                android:layout_marginLeft="25dp"
+                android:textSize="18dp"/>
+        </FrameLayout>
+        <ImageView
+            android:id="@+id/btn_more"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/baseline_more_horiz_24"
+            android:layout_gravity="right|top"
+            android:layout_margin="15dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_deskripsi_komunitas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/clicked_community"
+        android:text="Deskripsi Komunitas"
+        android:textAlignment="viewStart"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="45dp"/>
+    <Button
+        android:id="@+id/btn_anggota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_deskripsi_komunitas"
+        android:text="Anggota"
+        android:textAlignment="viewStart"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"/>
+    <Button
+        android:id="@+id/btn_moderator_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_anggota"
+        android:text="Admin dan Moderator"
+        android:textAlignment="viewStart"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"/>
+    <Button
+        android:id="@+id/btn_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_moderator_admin"
+        android:text="Event"
+        android:textAlignment="viewStart"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"/>
+    <Button
+        android:id="@+id/btn_review_komunitas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_event"
+        android:text="Review Komunitas"
+        android:textAlignment="viewStart"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"/>
+    <Button
+        android:id="@+id/btn_keluar_komunitas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_review_komunitas"
+        android:text="Keluar Komunitas"
+        android:textAlignment="viewStart"
+        android:backgroundTint="@color/red"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
