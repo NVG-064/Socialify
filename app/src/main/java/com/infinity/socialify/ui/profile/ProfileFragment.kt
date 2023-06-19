@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.commit
+import androidx.navigation.fragment.findNavController
 import com.infinity.socialify.R
 import com.infinity.socialify.databinding.FragmentProfileBinding
 import com.infinity.socialify.ui.home.HomeFragment
@@ -47,12 +48,8 @@ class ProfileFragment : Fragment() {
     super.onViewCreated(view, savedInstanceState)
 
     binding.switchTestFragmentButton.setOnClickListener {
-      val homeFragment = HomeFragment()
-      val fragmentManager = parentFragmentManager
-      fragmentManager.beginTransaction()
-        .replace(R.id.nav_host_fragment_activity_main, homeFragment, HomeFragment::class.java.simpleName)
-        .addToBackStack(null)
-        .commit()
+      val navController = findNavController()
+      navController.navigate(R.id.navigation_home)
     }
   }
 

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape
+<shape xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
 
     <solid
-        android:color="#FFFFFFFF">
+        android:color="@color/bg_leaderboard_color">
     </solid>
 
     <stroke
-        android:width="2dp"
+        android:width="4dp"
         android:color="#FFFFFFFF">
     </stroke>
 
@@ -20,7 +20,7 @@
     </padding>
 
     <corners
-        android:radius="12dp">
+        android:radius="32dp">
     </corners>
 
 </shape>

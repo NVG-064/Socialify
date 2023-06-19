@@ -10,10 +10,13 @@ import com.infinity.socialify.databinding.ItemRowExploreBinding
  * Adapter with ViewBinding
  */
 class ExploreListAdapter(private val explore: ArrayList<Explore>) : RecyclerView.Adapter<ExploreListAdapter.ExploreViewHolder>() {
-  class ExploreViewHolder(binding: ItemRowExploreBinding) : RecyclerView.ViewHolder(binding.root) {
-    val exploreImage = binding.imageExploreImageView
-    val exploreTitle = binding.titleExploreTextView
+  private lateinit var onClickListener: OnClickListener
+
+  fun setOnClickListener(clickListener: OnClickListener) {
+    onClickListener = clickListener
   }
+
+  class ExploreViewHolder(val binding: ItemRowExploreBinding) : RecyclerView.ViewHolder(binding.root)
 
   /**
    * Use ViewBinding instead classic method
@@ -39,7 +42,19 @@ class ExploreListAdapter(private val explore: ArrayList<Explore>) : RecyclerView
   override fun onBindViewHolder(holder: ExploreViewHolder, position: Int) {
     val (image, title) = explore[position]
 
-    holder.exploreImage.setImageResource(image)
-    holder.exploreTitle.text = title
+    holder.binding.imageExploreImageView.setImageResource(image)
+    holder.binding.titleExploreTextView.text = title
+
+    holder.binding.root.isEnabled = explore[position].active
+
+    holder.binding.root.setOnClickListener {
+      onClickListener.onClick(position)
+    }
+  }
+
+  interface OnClickListener {
+    fun onClick(
+      position: Int
+    )
   }
 }

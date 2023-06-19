@@ -59,6 +59,12 @@
     <string name="explore_description">PIlih hobi dan minat yang sesuai dengan kamu</string>
     <string name="skip">Lewati</string>
     <string name="template_explore_title">Explore Title</string>
+    <string name="template_community_title">Community Title</string>
+    <string name="template_community_members">Community members</string>
+    <string name="template_community_rating">Community rating</string>
+    <string name="template_community_category">Community category</string>
+    <string name="create_community">Buat Komunitas</string>
+    <string name="leaderboard_community">Papan Peringkat Komunitas</string>
 
     <string-array name="data_explore_image">
         <item>@drawable/explore_games</item>
@@ -88,6 +94,42 @@
         <item>Kesehatan</item>
         <item>Olahraga</item>
         <item>Film dan Buku</item>
+    </string-array>
+
+    <integer-array name="data_community_leaderboard_position">
+        <item>@drawable/peringkat_satu</item>
+        <item>@drawable/peringkat_dua</item>
+        <item>@drawable/peringkat_tiga</item>
+    </integer-array>
+
+    <integer-array name="data_community_leaderboard_picture">
+        <item>@drawable/profile_picture_1</item>
+        <item>@drawable/profile_picture_2</item>
+        <item>@drawable/profile_picture_3</item>
+    </integer-array>
+
+    <string-array name="data_community_leaderboard_title">
+        <item>Programmer Forum</item>
+        <item>Programming is FUN</item>
+        <item>Geek and Program</item>
+    </string-array>
+
+    <string-array name="data_community_leaderboard_total_members">
+        <item>7.3k anggota</item>
+        <item>10.6k anggota</item>
+        <item>1k anggota</item>
+    </string-array>
+
+    <string-array name="data_community_leaderboard_rating">
+        <item>4.8</item>
+        <item>4.6</item>
+        <item>4.1</item>
+    </string-array>
+
+    <string-array name="data_community_leaderboard_category">
+        <item>#pemrograman</item>
+        <item>#pemrograman</item>
+        <item>#pemrograman</item>
     </string-array>
 
 </resources>

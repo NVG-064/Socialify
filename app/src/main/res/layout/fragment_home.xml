@@ -1,89 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment"
-    android:background="@color/primary_color">
+    android:background="@color/primary_color"
+    android:padding="24dp"
+    tools:context=".ui.home.HomeFragment">
 
-    <ImageView
-        android:id="@+id/btn_buat_komunitas"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/buat_komunitas"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="15dp"/>
-    <TextView
-        android:id="@+id/tv_buat_komunitas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Buat Komunitas"
-        android:textSize="14dp"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toEndOf="@+id/btn_buat_komunitas"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="8dp"
-        android:textStyle="bold"/>
-
-    <ImageView
-        android:id="@+id/btn_urut_berdasarkan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_buat_komunitas"
-        android:src="@drawable/urut_berdasarkan"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="16dp"/>
-    <TextView
-        android:id="@+id/tv_urut_berdasarkan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Urut Berdasarkan"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/btn_buat_komunitas"
-        app:layout_constraintEnd_toStartOf="@id/btn_urut_berdasarkan"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="18dp"/>
-    
-    <FrameLayout
-        android:id="@+id/papan_peringkat"
-        android:layout_width="328dp"
-        android:layout_height="361dp"
-        app:layout_constraintTop_toBottomOf="@id/btn_urut_berdasarkan"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="1dp"
-        app:cardCornerRadius="32dp"
-        android:background="@drawable/card_tertiary">
-
-        <TextView
-            android:id="@+id/tv_papan_peringkat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Papan Peringkat Komunitas"
-            android:textSize="24dp"
-            android:layout_gravity="center_horizontal"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_marginTop="21dp"/>
+        android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="108dp"
-            android:layout_gravity="center_horizontal">
-            
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_papan_peringkat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/createCommunityHomeImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/buat_komunitas"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/createCommunityHomeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="@string/create_community"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/createCommunityHomeImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/sortByHomeSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/createCommunityHomeTextView"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <FrameLayout
+                android:id="@+id/leaderboardCommunityFrameLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:padding="24dp"
+                android:foregroundGravity="center"
+                android:background="@drawable/bg_leaderboard_shape"
+                app:layout_constraintTop_toBottomOf="@id/sortByHomeSpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/leaderboardCommunityHomeTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="@string/leaderboard_community"
+                        android:textSize="24sp"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvPapanPeringkat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/list_papan_peringkat"
+                        app:layout_constraintTop_toBottomOf="@id/leaderboardCommunityHomeTextView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </FrameLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </FrameLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

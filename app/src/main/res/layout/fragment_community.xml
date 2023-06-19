@@ -42,11 +42,11 @@
         app:layout_constraintTop_toBottomOf="@id/et_buat_diskusi"
         android:layout_marginTop="10dp">
         <ImageView
-            android:id="@+id/btn_urut_berdasarkan"
+            android:id="@+id/sortByHomeImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right|center_vertical"
-            android:src="@drawable/urut_berdasarkan"
+            android:src="@drawable/sort_by"
             android:layout_marginRight="15dp"/>
         <TextView
             android:id="@+id/tv_urut_berdasarkan"

@@ -23,4 +23,9 @@
         <item name="android:fontFamily">@font/poppins_regular</item>
     </style>
 
+<!--    Do later, need to rework the bottom navbar-->
+    <style name="NavBarTheme" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/secondary_color</item>
+    </style>
+
 </resources>

@@ -51,7 +51,17 @@ class ExploreActivity : AppCompatActivity() {
     }
 
   private fun showRecyclerView() {
+    val exploreAdapter = ExploreListAdapter(exploreData)
+
     binding.exploreRecyclerView.layoutManager = GridLayoutManager(this, 2)
-    binding.exploreRecyclerView.adapter = ExploreListAdapter(exploreData)
+    binding.exploreRecyclerView.adapter = exploreAdapter
+
+    exploreAdapter.setOnClickListener(object:ExploreListAdapter.OnClickListener {
+      override fun onClick(position: Int) {
+        exploreData[position].active = true
+
+        exploreAdapter.notifyDataSetChanged()
+      }
+    })
   }
 }
