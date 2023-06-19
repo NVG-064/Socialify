@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -44,50 +44,19 @@
                 app:layout_constraintTop_toBottomOf="@id/createCommunityHomeTextView"
                 app:layout_constraintEnd_toEndOf="parent"/>
 
-            <FrameLayout
-                android:id="@+id/leaderboardCommunityFrameLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:padding="24dp"
-                android:foregroundGravity="center"
-                android:background="@drawable/bg_leaderboard_shape"
-                app:layout_constraintTop_toBottomOf="@id/sortByHomeSpinner"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/leaderboardCommunityHomeTextView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_bold"
-                        android:text="@string/leaderboard_community"
-                        android:textSize="24sp"
-                        android:textColor="@color/white"
-                        android:textAlignment="center"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"/>
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rvPapanPeringkat"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        tools:itemCount="3"
-                        tools:listitem="@layout/list_papan_peringkat"
-                        app:layout_constraintTop_toBottomOf="@id/leaderboardCommunityHomeTextView"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </FrameLayout>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/leaderboardCommunityFragmentContainerView"
+            android:name="com.infinity.socialify.LeaderboardCommunityFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/leaderboardComFragmentContainerView"
+            android:name="com.infinity.socialify.LeaderboardCommunityFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
     </LinearLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
