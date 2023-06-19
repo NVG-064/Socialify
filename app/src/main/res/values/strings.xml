@@ -47,7 +47,7 @@
     <string name="success_change_password">Kata sandi berhasil diganti</string>
     <string name="go_to_sign_in">Pergi ke laman Masuk</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="title_home">Home</string>
+    <string name="title_home">Beranda</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
