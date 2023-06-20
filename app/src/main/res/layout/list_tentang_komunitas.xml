@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primary_color">
+
+    <TextView
+        android:id="@+id/heading_tentang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tentang"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/secondary_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="15dp"/>
+    <TextView
+        android:id="@+id/tv_tentang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Programmer Forum adalah tempat perkumpulan para programmer veteran maupun pemula untuk saling berbagi ilmu dan info seputar teknologi."
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/heading_tentang"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <TextView
+        android:id="@+id/heading_riwayat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Riwayat"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/secondary_color"
+        app:layout_constraintTop_toBottomOf="@id/tv_tentang"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="15dp"/>
+    <TextView
+        android:id="@+id/tv_riwayat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Komunitas ini berdiri sejak 7 april 2020. Didirikan oleh 3 orang moderator di Jakarata"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/heading_riwayat"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
