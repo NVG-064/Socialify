@@ -27,6 +27,7 @@
         android:background="?android:attr/windowBackground"
         android:layout_alignParentBottom="true"
         app:itemTextColor="@color/tertiary_color"
+        app:itemIconTint="@color/tertiary_color"
         app:itemActiveIndicatorStyle="@style/NavBarTheme"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
