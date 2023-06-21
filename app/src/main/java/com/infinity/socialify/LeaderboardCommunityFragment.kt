@@ -40,7 +40,7 @@ class LeaderboardCommunityFragment : Fragment() {
      * To binding, id must be camelCase
      * Moved to below section
      */
-    binding.rvPapanPeringkat.setHasFixedSize(true)
+//    binding.rvPapanPeringkat.setHasFixedSize(true)
 
     // Add all data to onCreate() and show the RecyclerView
     leaderboardCommunityData.addAll(leaderboardCommunityList)
@@ -81,7 +81,7 @@ class LeaderboardCommunityFragment : Fragment() {
     binding.rvPapanPeringkat.apply {
       layoutManager = LinearLayoutManager(requireContext())
       adapter = LeaderboardCommunityListAdapter(leaderboardCommunityData)
-//      setHasFixedSize(true)
+      setHasFixedSize(true)
     }
   }
 }

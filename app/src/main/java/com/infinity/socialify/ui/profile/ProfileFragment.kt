@@ -49,7 +49,7 @@ class ProfileFragment : Fragment() {
 
     binding.switchTestFragmentButton.setOnClickListener {
       val navController = findNavController()
-      navController.navigate(R.id.navigation_home)
+      navController.navigate(R.id.navigation_community_recommendation)
     }
   }
 

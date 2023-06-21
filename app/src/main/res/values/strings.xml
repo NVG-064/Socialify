@@ -65,8 +65,12 @@
     <string name="template_community_category">Community category</string>
     <string name="create_community">Buat Komunitas</string>
     <string name="leaderboard_community">Papan Peringkat Komunitas</string>
+    <string name="community_recommendation">Rekomendasi Komunitas</string>
+    <string name="community_recommendation_desc">Sesuai minat kamu</string>
+    <string name="join">Gabung</string>
+    <string name="find_more">Temukan lebih banyak</string>
 
-    <string-array name="data_explore_image">
+    <integer-array name="data_explore_image">
         <item>@drawable/explore_games</item>
         <item>@drawable/explore_social_politics</item>
         <item>@drawable/explore_photograph</item>
@@ -79,7 +83,7 @@
         <item>@drawable/explore_healthy</item>
         <item>@drawable/explore_sports</item>
         <item>@drawable/explore_film_books</item>
-    </string-array>
+    </integer-array>
 
     <string-array name="data_explore_title">
         <item>Permainan</item>
@@ -136,6 +140,78 @@
         <item>Rating tertinggi</item>
         <item>Anggota terbanyak</item>
         <item>Minat</item>
+    </string-array>
+
+    <integer-array name="data_community_recommendation_profile_picture">
+        <item>@drawable/profile_picture_1</item>
+        <item>@drawable/gamer_ff_senggol</item>
+        <item>@drawable/profile_picture_2</item>
+        <item>@drawable/profile_picture_3</item>
+    </integer-array>
+
+    <string-array name="data_community_recommendation_title">
+        <item>Programmer Forum</item>
+        <item>GAMER FF SENGGOL</item>
+        <item>Programming is FUN</item>
+        <item>Geek and Program</item>
+    </string-array>
+
+    <string-array name="data_community_recommendation_members">
+        <item>7.3k</item>
+        <item>1.5k</item>
+        <item>10.6k</item>
+        <item>1k</item>
+    </string-array>
+
+    <string-array name="data_community_recommendation_rating">
+        <item>4.8</item>
+        <item>4.1</item>
+        <item>4.6</item>
+        <item>4.1</item>
+    </string-array>
+
+    <integer-array name="data_notification_image">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </integer-array>
+    
+    <string-array name="data_notification_title">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    
+    <string-array name="data_notification_time">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    
+    <string-array name="data_notification_post_id">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
     </string-array>
 
 </resources>

@@ -66,9 +66,10 @@
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/recommendationCommunityFragmentContainerView"
             android:layout_marginTop="24dp"
-
+            android:background="@drawable/bg_recommendation_shape"
+            android:name="com.infinity.socialify.CommunityRecommendationFragment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

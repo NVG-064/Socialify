@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24dp"
+    tools:context=".CommunityRecommendationFragment">
+
+    <TextView
+        android:id="@+id/recommendationTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="20sp"
+        android:textColor="@color/primary_color"
+        android:text="@string/community_recommendation" />
+
+    <TextView
+        android:id="@+id/communityRecommendationDescTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/recommendationTitleTextView"
+        android:textColor="@color/primary_color"
+        android:text="@string/community_recommendation_desc" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/communityRecommendationRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/communityRecommendationDescTextView"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_row_community_recommendation" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/communityRecommendationRecyclerView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/secondary_color"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/find_more"
+        android:textColor="@color/primary_color" />
+
+</RelativeLayout>

@@ -28,4 +28,9 @@
         android:name="com.infinity.socialify.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_community_recommendation"
+        android:name="com.infinity.socialify.CommunityRecommendationFragment"
+        tools:layout="@layout/fragment_community_recommendation"/>
 </navigation>

@@ -2,6 +2,7 @@ package com.infinity.socialify.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.infinity.socialify.data.LeaderboardCommunity
 import com.infinity.socialify.databinding.ListPapanPeringkatBinding
@@ -37,5 +38,10 @@ class LeaderboardCommunityListAdapter(private val leaderboardCommunity: ArrayLis
     holder.comMember.text = member
     holder.comRating.text = rating
     holder.comCategory.text = category
+
+    // Initial development feature
+    holder.comTitle.setOnClickListener {
+      Toast.makeText(holder.comTitle.context, title, Toast.LENGTH_SHORT).show()
+    }
   }
 }
