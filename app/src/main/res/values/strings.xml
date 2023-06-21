@@ -69,6 +69,7 @@
     <string name="community_recommendation_desc">Sesuai minat kamu</string>
     <string name="join">Gabung</string>
     <string name="find_more">Temukan lebih banyak</string>
+    <string name="detail">Detail</string>
 
     <integer-array name="data_explore_image">
         <item>@drawable/explore_games</item>
