@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Jockey+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jockey+One&family=Poppins&display=swap");
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid;
+  border-radius: 10px;
+  background-color: #ba4afb;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #20043f;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.bg-purple-sosialify {
+  background: #20043f;
+}
+
+.header-text {
+  font-family: "Jockey One", sans-serif;
+  -webkit-text-stroke: thin black;
+}
+
+.coolinput {
+  display: flex;
+  flex-direction: column;
+}
+
+.coolinput label.text {
+  font-size: 0.85rem;
+  color: #fff;
+  font-weight: 700;
+  position: relative;
+  top: 0.6rem;
+  margin-left: 1.25rem;
+  padding-inline: 10px;
+  width: fit-content;
+}
+
+.coolinput input[type].input {
+  padding: 1rem 10px;
+  font-size: 0.75rem;
+  border: 1px #fff solid;
+  border-radius: 10px;
+  caret-color: red;
+}
+
+.coolinput input[type].input:focus {
+  outline: none;
+}
+
+.line::before {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  height: 1px;
+  background-color: #fff;
+  top: 50%;
+  left: -7rem;
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  height: 1px;
+  background-color: #fff;
+  top: 50%;
+  right: -7rem;
+}
+
+.btn-auth {
+  width: 90%;
+}
+
+@media (width >=900px) {
+  .btn-auth {
+    width: 50%;
+  }
+}
+
+.box-forgot-password {
+  background: linear-gradient(to bottom, #af40f1, #520183);
+}
+
+.btn-purple-gradient {
+  background: linear-gradient(180deg, #ba4afb 0%, #8716ca 100%) !important;
+}
+.bg-komunitas {
+  background-color: #7d15bd;
+}
+
+.comment-card {
+  background: linear-gradient(180deg, rgba(135, 22, 202, 0.43) 0%, rgba(255, 255, 255, 0) 51.82%, rgba(200, 149, 231, 0.195963) 100%);
+}
