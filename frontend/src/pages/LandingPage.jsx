@@ -1,14 +1,15 @@
 // import { useNavigate } from "react-router-dom"
-
-import Navbar from "../components/NavbarComponent"
+import Footer from "../components/FooterComponent"
+import Navbar0 from "../components/NavbarComponent0"
 
 const LandingPage = () => {
     // const navigate = useNavigate()
 
     return (
         <>
-            <Navbar />
+            <Navbar0 />
             <div>LandingPage</div>
+            <Footer />
         </>
     )
 }
