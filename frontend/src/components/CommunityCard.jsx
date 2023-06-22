@@ -3,8 +3,11 @@ import C2 from "../assets/images/BelajarBersama.png";
 import C3 from "../assets/images/Pecintakucing.png";
 import C4 from "../assets/images/PentasMusikKlasik.png";
 import TN from "../assets/images/thumb.png";
+import { useNavigate } from 'react-router-dom'
 
 function CommunityCard() {
+    const navigate = useNavigate()
+
     return (
         <div className="w-full h-auto flex flex-col">
             <div className="w-full h-auto flex flex-row bg-white p-[10px] mb-3 gap-[20px]">
@@ -13,7 +16,7 @@ function CommunityCard() {
                     <div className="flex flex-row justify-center items-center gap-5">
                         <img src={TN} alt="" className="w-[58px] h-auto rounded-[20px]" />
                         <h1 className="font-bold text-[24px] ">Mahir Programming</h1>
-                        <button className="w-[85px] h-auto px-3 py-2 bg-[#FFBE3F] rounded-[10px] font-semibold">Gabung</button>
+                        <button onClick={() => navigate('/discussion-page')} className="w-[85px] h-auto px-3 py-2 bg-[#FFBE3F] rounded-[10px] font-semibold">Gabung</button>
                     </div>
                     <p className="text-[20px] mt-2 leading-6">Dapatkan bantuan dari ribuan ahli dan profesional programmer di seluruh Indonesia. Disini kamu bisa mengajukan berbagai pertanyaan seputar programmer yang kamu tidak ketahui.</p>
                     <div className="flex flex-row justify-center items-center gap-5 mt-2">

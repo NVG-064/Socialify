@@ -40,7 +40,7 @@ const SearchCommunityPage = () => {
                 <div className="w-full h-auto items-center justify-center flex">
                     <div className="w-[75%] h-auto items-start mb-10">
                         <h1 className="text-[32px] font-bold text-[#FFBE3F] mb-8">Hasil Pencarian</h1>
-                        <Card></Card>
+                        <Card />
                     </div>
                 </div>
 
