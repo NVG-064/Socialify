@@ -172,47 +172,47 @@
     </string-array>
 
     <integer-array name="data_notification_image">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>@drawable/asus_syamsudin</item>
+        <item>@drawable/abdul_hamid</item>
+        <item>@drawable/mas_bro</item>
+        <item>@drawable/farhan_kebab</item>
+        <item>@drawable/programmer_forum</item>
+        <item>@drawable/pria_berbibir_tebal</item>
+        <item>@drawable/bunda_rahma</item>
+        <item>@drawable/reza_kecap</item>
     </integer-array>
 
     <string-array name="data_notification_title">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>Asus Syamsudin menanggapi postingan Anda</item>
+        <item>Abdul Hamid mengomentari postingan Anda</item>
+        <item>Mas Bro menyebut Anda dalam suatu postingan</item>
+        <item>Farhan Kebab mengomentari postingan Anda</item>
+        <item>Programmer Forum akan menyelenggarakan acara</item>
+        <item>Pria Berbibir Tebal menyebut Anda dalam suatu postingan</item>
+        <item>Bunda Rahma menanggapi postingan Anda</item>
+        <item>Reza Kecap membagikan postingan Anda</item>
     </string-array>
 
     <string-array name="data_notification_time">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>2023-06-21T01:10:57.082Z</item>
+        <item>2023-06-20T01:10:57.082Z</item>
+        <item>2023-06-19T01:10:57.082Z</item>
+        <item>2023-06-18T01:10:57.082Z</item>
+        <item>2023-06-17T01:10:57.082Z</item>
+        <item>2023-06-16T01:10:57.082Z</item>
+        <item>2023-06-15T01:10:57.082Z</item>
+        <item>2023-06-14T01:10:57.082Z</item>
     </string-array>
 
     <string-array name="data_notification_post_id">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>123456780</item>
+        <item>123456781</item>
+        <item>123456782</item>
+        <item>123456783</item>
+        <item>123456784</item>
+        <item>123456785</item>
+        <item>123456786</item>
+        <item>123456787</item>
     </string-array>
 
 </resources>

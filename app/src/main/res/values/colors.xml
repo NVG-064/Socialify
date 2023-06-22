@@ -12,4 +12,5 @@
     <color name="btn_peringkat">#FFBA4AFB</color>
     <color name="another_color">#FF361D52</color>
     <color name="bg_leaderboard_color">#FF8716CA</color>
+    <color name="bg_notification_color">#E620043F</color>
 </resources>

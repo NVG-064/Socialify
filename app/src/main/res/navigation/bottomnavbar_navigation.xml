@@ -33,4 +33,9 @@
         android:id="@+id/navigation_community_recommendation"
         android:name="com.infinity.socialify.CommunityRecommendationFragment"
         tools:layout="@layout/fragment_community_recommendation"/>
+
+    <fragment
+        android:id="@+id/navigation_detail_post"
+        android:name="com.infinity.socialify.ui.detail_post.DetailPostFragment"
+        tools:layout="@layout/fragment_detail_post"/>
 </navigation>
