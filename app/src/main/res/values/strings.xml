@@ -85,6 +85,13 @@
     <string name="title_settings">Pengaturan</string>
     <string name="private_account">Akun Privat</string>
     <string name="sign_out">Keluar Akun</string>
+    <string name="question_1_desc">Apa alasanmu bergabung dengan komunitas ini?</string>
+    <string name="question_2_desc">Apa yang kamu harapkan setelah bergabung dengan komunitas ini?</string>
+    <string name="type_your_answer">Ketik jawabanmu</string>
+    <string name="title_community_information">Informasi Komunitas</string>
+    <string name="title_community_join_request">Permintaan Bergabung</string>
+    <string name="title_discussion_forum">Forum Diskusi</string>
+    <string name="example_community_title_1">Programmer Forum</string>
 
     <integer-array name="data_explore_image">
         <item>@drawable/explore_games</item>
