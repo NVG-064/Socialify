@@ -2,7 +2,9 @@ package com.infinity.socialify.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.infinity.socialify.R
 import com.infinity.socialify.data.CommunityRecommendation
 import com.infinity.socialify.databinding.ItemRowCommunityRecommendationBinding
 
@@ -12,6 +14,7 @@ class CommunityRecommendationListAdapter(private val communityRecommendation: Ar
     val recTitle = binding.recommendationTitleTextView
     val recMembers = binding.recommendationMembersTextView
     val recRating = binding.recommendationRatingTextView
+    val recBtn = binding.recommendationDetailCommunityButton
   }
 
   override fun onCreateViewHolder(
@@ -33,5 +36,10 @@ class CommunityRecommendationListAdapter(private val communityRecommendation: Ar
     holder.recTitle.text = title
     holder.recMembers.text = members + " anggota"
     holder.recRating.text = rating
+
+    holder.recBtn.setOnClickListener {
+      val navController = findNavController(holder.itemView)
+      navController.navigate(R.id.navigation_short_info_community)
+    }
   }
 }

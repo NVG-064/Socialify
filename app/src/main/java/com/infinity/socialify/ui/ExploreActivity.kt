@@ -21,11 +21,8 @@ class ExploreActivity : AppCompatActivity() {
     setContentView(binding.root)
 
     binding.skipExploreButton.setOnClickListener {
-      startActivity(Intent(this, MainActivity::class.java))
-      finish()
+      startActivity(Intent(this, MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
     }
-
-    binding.exploreRecyclerView.setHasFixedSize(true)
 
     // Add all data to onCreate() and show the RecyclerView
     exploreData.addAll(exploreList)
@@ -44,24 +41,18 @@ class ExploreActivity : AppCompatActivity() {
           dataImage.getResourceId(i, -1),
           dataTitle[i]
         )
-        dataList.add(explore)
+
+        if (exploreData.size < dataTitle.size) dataList.add(explore)
       }
 
       return dataList
     }
 
   private fun showRecyclerView() {
-    val exploreAdapter = ExploreListAdapter(exploreData)
-
-    binding.exploreRecyclerView.layoutManager = GridLayoutManager(this, 2)
-    binding.exploreRecyclerView.adapter = exploreAdapter
-
-    exploreAdapter.setOnClickListener(object:ExploreListAdapter.OnClickListener {
-      override fun onClick(position: Int) {
-        exploreData[position].active = true
-
-        exploreAdapter.notifyDataSetChanged()
-      }
-    })
+    binding.exploreRecyclerView.apply {
+      layoutManager = GridLayoutManager(this.context, 2)
+      adapter = ExploreListAdapter(exploreData)
+      setHasFixedSize(true)
+    }
   }
 }

@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.infinity.socialify.R
 import com.infinity.socialify.databinding.FragmentSearchBinding
 
 class SearchFragment : Fragment() {
@@ -32,6 +32,20 @@ class SearchFragment : Fragment() {
 //      textView.text = it
 //    }
     return binding.root
+  }
+
+  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
+
+    val navController = findNavController()
+
+    binding.searchSettingsButtonImageView.setOnClickListener {
+      navController.navigate(R.id.navigation_settings)
+    }
+
+    binding.searchButtonMaterialButton.setOnClickListener {
+      navController.navigate(R.id.navigation_search_result)
+    }
   }
 
   override fun onDestroyView() {

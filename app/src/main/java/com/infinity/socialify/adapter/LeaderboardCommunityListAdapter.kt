@@ -3,7 +3,9 @@ package com.infinity.socialify.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.infinity.socialify.R
 import com.infinity.socialify.data.LeaderboardCommunity
 import com.infinity.socialify.databinding.ListPapanPeringkatBinding
 
@@ -15,6 +17,7 @@ class LeaderboardCommunityListAdapter(private val leaderboardCommunity: ArrayLis
     val comMember = binding.totalMemberLeaderboardTextView
     val comRating = binding.ratingLeaderboardTextView
     val comCategory = binding.categoryLeaderboardTextView
+    val comLayout = binding.communityLeaderboardCardView
   }
 
   override fun onCreateViewHolder(
@@ -40,8 +43,9 @@ class LeaderboardCommunityListAdapter(private val leaderboardCommunity: ArrayLis
     holder.comCategory.text = category
 
     // Initial development feature
-    holder.comTitle.setOnClickListener {
-      Toast.makeText(holder.comTitle.context, title, Toast.LENGTH_SHORT).show()
+    holder.comLayout.setOnClickListener {
+      val navController = findNavController(holder.itemView)
+      navController.navigate(R.id.navigation_short_info_community)
     }
   }
 }

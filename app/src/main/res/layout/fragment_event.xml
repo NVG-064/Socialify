@@ -46,5 +46,13 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_margin="15dp"/>
 
+    <Button
+        android:id="@+id/goToEventButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Event"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_akan_berlangsung" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

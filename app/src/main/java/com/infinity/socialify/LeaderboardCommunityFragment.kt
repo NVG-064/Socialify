@@ -28,7 +28,7 @@ class LeaderboardCommunityFragment : Fragment() {
   override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?
-  ): View? {
+  ): View {
     _binding = FragmentLeaderboardCommunityBinding.inflate(inflater, container, false)
     return binding.root
   }

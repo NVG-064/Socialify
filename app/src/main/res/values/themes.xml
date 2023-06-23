@@ -21,6 +21,7 @@
 
     <style name="HomeTheme" parent="Theme.Material3.Light.NoActionBar">
         <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:statusBarColor">@color/primary_color</item>
     </style>
 
 <!--    Do later, need to rework the bottom navbar-->

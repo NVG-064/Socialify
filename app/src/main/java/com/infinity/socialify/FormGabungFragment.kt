@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import com.infinity.socialify.databinding.FragmentFormGabungBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +23,9 @@ class FormGabungFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private val _binding: FragmentFormGabungBinding ?= null
+    private val binding get() = _binding!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -32,9 +37,18 @@ class FormGabungFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_form_gabung, container, false)
+    ): View {
+        val binding = FragmentFormGabungBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.kirimJawaban.setOnClickListener {
+            val navController = findNavController()
+            navController.navigate(R.id.navigation_discussion_community)
+        }
     }
 
     companion object {

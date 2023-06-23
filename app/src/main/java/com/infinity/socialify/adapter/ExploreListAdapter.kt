@@ -1,9 +1,12 @@
 package com.infinity.socialify.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.infinity.socialify.MainActivity
 import com.infinity.socialify.R
 import com.infinity.socialify.data.Explore
 import com.infinity.socialify.databinding.ItemRowExploreBinding
@@ -12,13 +15,11 @@ import com.infinity.socialify.databinding.ItemRowExploreBinding
  * Adapter with ViewBinding
  */
 class ExploreListAdapter(private val explore: ArrayList<Explore>) : RecyclerView.Adapter<ExploreListAdapter.ExploreViewHolder>() {
-  private lateinit var onClickListener: OnClickListener
-
-  fun setOnClickListener(clickListener: OnClickListener) {
-    onClickListener = clickListener
+  class ExploreViewHolder(val binding: ItemRowExploreBinding) : RecyclerView.ViewHolder(binding.root) {
+    val expLayout = binding.itemExploreLayout
+    val expImage = binding.imageExploreImageView
+    val expTitle = binding.titleExploreTextView
   }
-
-  class ExploreViewHolder(val binding: ItemRowExploreBinding) : RecyclerView.ViewHolder(binding.root)
 
   /**
    * Use ViewBinding instead classic method
@@ -44,25 +45,11 @@ class ExploreListAdapter(private val explore: ArrayList<Explore>) : RecyclerView
   override fun onBindViewHolder(holder: ExploreViewHolder, position: Int) {
     val (image, title) = explore[position]
 
-    holder.binding.imageExploreImageView.setImageResource(image)
-    holder.binding.titleExploreTextView.text = title
+    holder.expImage.setImageResource(image)
+    holder.expTitle.text = title
 
-    holder.binding.itemExploreLayout.setOnClickListener {
-      val navController = findNavController(holder.itemView)
-      navController.navigate(R.id.navigation_home)
+    holder.expLayout.setOnClickListener {
+      holder.expTitle.context.startActivity(Intent(holder.expTitle.context, MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
     }
-
-    holder.binding.root.isEnabled = explore[position].active
-
-    holder.binding.root.setOnClickListener {
-
-      onClickListener.onClick(position)
-    }
-  }
-
-  interface OnClickListener {
-    fun onClick(
-      position: Int
-    )
   }
 }

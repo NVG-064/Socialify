@@ -70,6 +70,21 @@
     <string name="join">Gabung</string>
     <string name="find_more">Temukan lebih banyak</string>
     <string name="detail">Detail</string>
+    <string name="title_search">Pencarian</string>
+    <string name="search_result_for">Hasil pencarian untuk</string>
+    <string name="search_result">Hasil Pencarian</string>
+    <string name="name_example_1">Abdul Hamid</string>
+    <string name="description_example_1">Aku adalah seorang pria yang menyukai kegelapan. Kegelapan adalah sebuah mahakarya Tuhan yang sangat agung. Kegelapan menciptakan diriku menjadi seorang lelaki tangguh seperti Master Character di game. Mencari seseorang dengan kriteria cantik, tajir melintir, dan punya banyak waktu untuk membangun rumah tangga bersama. Foto asli, bukan maling dari Pinterest. Senang menjaga ucapan. Menfess? Maksudmu ajang menyebar aib?</string>
+    <string name="title_interest">Ketertarikan</string>
+    <string name="nothing">Tidak ada</string>
+    <string name="title_birthdate">Tanggal Lahir</string>
+    <string name="birthdate_example_1">16 April 1982</string>
+    <string name="city_place_example_1">Jakarta, Indonesia</string>
+    <string name="title_born_place">Tempat Lahir</string>
+    <string name="title_city_place">Tempat Singgah</string>
+    <string name="title_settings">Pengaturan</string>
+    <string name="private_account">Akun Privat</string>
+    <string name="sign_out">Keluar Akun</string>
 
     <integer-array name="data_explore_image">
         <item>@drawable/explore_games</item>
@@ -194,14 +209,14 @@
     </string-array>
 
     <string-array name="data_notification_time">
-        <item>2023-06-21T01:10:57.082Z</item>
-        <item>2023-06-20T01:10:57.082Z</item>
-        <item>2023-06-19T01:10:57.082Z</item>
-        <item>2023-06-18T01:10:57.082Z</item>
-        <item>2023-06-17T01:10:57.082Z</item>
-        <item>2023-06-16T01:10:57.082Z</item>
-        <item>2023-06-15T01:10:57.082Z</item>
-        <item>2023-06-14T01:10:57.082Z</item>
+        <item>2023&#8211;06&#8211;21T01:10:57.082Z</item>
+        <item>2023&#8211;06&#8211;20T01:10:57.082Z</item>
+        <item>2023&#8211;06&#8211;19T01:10:57.082Z</item>
+        <item>2023&#8211;06&#8211;18T01:10:57.082Z</item>
+        <item>2023&#8211;06&#8211;17T01:10:57.082Z</item>
+        <item>2023&#8211;06&#8211;16T01:10:57.082Z</item>
+        <item>2023&#8211;06&#8211;15T01:10:57.082Z</item>
+        <item>2023&#8211;06&#8211;14T01:10:57.082Z</item>
     </string-array>
 
     <string-array name="data_notification_post_id">
@@ -213,6 +228,102 @@
         <item>123456785</item>
         <item>123456786</item>
         <item>123456787</item>
+    </string-array>
+
+    <integer-array name="data_search_result_profile_picture">
+        <item>@drawable/profile_picture_1</item>
+        <item>@drawable/programming_ajaib</item>
+        <item>@drawable/android_programmer</item>
+    </integer-array>
+
+    <string-array name="data_search_result_title">
+        <item>Programmer Forum</item>
+        <item>Programming Ajaib</item>
+        <item>Android Programmer</item>
+    </string-array>
+
+    <string-array name="data_search_result_members">
+        <item>7.3k</item>
+        <item>200</item>
+        <item>1.2k</item>
+    </string-array>
+
+    <integer-array name="data_members_profile_picture">
+        <item>@drawable/mas_bro</item>
+        <item>@drawable/mas_bro</item>
+        <item>@drawable/mas_bro</item>
+        <item>@drawable/mas_bro</item>
+        <item>@drawable/mas_bro</item>
+        <item>@drawable/mas_bro</item>
+        <item>@drawable/mas_bro</item>
+        <item>@drawable/mas_bro</item>
+        <item>@drawable/mas_bro</item>
+        <item>@drawable/mas_bro</item>
+    </integer-array>
+
+    <string-array name="data_members_title">
+        <item>Mas Bro</item>
+        <item>Mas Bro</item>
+        <item>Mas Bro</item>
+        <item>Mas Bro</item>
+        <item>Mas Bro</item>
+        <item>Mas Bro</item>
+        <item>Mas Bro</item>
+        <item>Mas Bro</item>
+        <item>Mas Bro</item>
+        <item>Mas Bro</item>
+    </string-array>
+
+    <string-array name="data_members_date_join">
+        <item>2023&#8211;06&#8211;21</item>
+        <item>2023&#8211;06&#8211;20</item>
+        <item>2023&#8211;06&#8211;19</item>
+        <item>2023&#8211;06&#8211;18</item>
+        <item>2023&#8211;06&#8211;17</item>
+        <item>2023&#8211;06&#8211;16</item>
+        <item>2023&#8211;06&#8211;15</item>
+        <item>2023&#8211;06&#8211;14</item>
+        <item>2023&#8211;06&#8211;13</item>
+        <item>2023&#8211;06&#8211;12</item>
+    </string-array>
+
+    <integer-array name="data_admods_profile_picture">
+        <item>@drawable/asus_syamsudin</item>
+        <item>@drawable/reza_kecap</item>
+        <item>@drawable/reza_kecap</item>
+        <item>@drawable/reza_kecap</item>
+        <item>@drawable/reza_kecap</item>
+        <item>@drawable/reza_kecap</item>
+        <item>@drawable/reza_kecap</item>
+        <item>@drawable/reza_kecap</item>
+        <item>@drawable/reza_kecap</item>
+        <item>@drawable/reza_kecap</item>
+    </integer-array>
+
+    <string-array name="data_admods_title">
+        <item>Asus Syamsudin</item>
+        <item>Reza Kecap</item>
+        <item>Reza Kecap</item>
+        <item>Reza Kecap</item>
+        <item>Reza Kecap</item>
+        <item>Reza Kecap</item>
+        <item>Reza Kecap</item>
+        <item>Reza Kecap</item>
+        <item>Reza Kecap</item>
+        <item>Reza Kecap</item>
+    </string-array>
+
+    <string-array name="data_admods_roles">
+        <item>Pemilik</item>
+        <item>Admin</item>
+        <item>Admin</item>
+        <item>Moderator</item>
+        <item>Moderator</item>
+        <item>Admin</item>
+        <item>Moderator</item>
+        <item>Admin</item>
+        <item>Admin</item>
+        <item>Admin</item>
     </string-array>
 
 </resources>

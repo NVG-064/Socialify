@@ -9,6 +9,7 @@ import android.widget.Spinner
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.infinity.socialify.R
 import com.infinity.socialify.adapter.LeaderboardCommunityListAdapter
@@ -39,6 +40,7 @@ class HomeFragment : Fragment() {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
+    val navController = findNavController()
     val spinner: Spinner = binding.sortByHomeSpinner
 
     // Create an ArrayAdapter using the string array and a default spinner layout
@@ -52,6 +54,10 @@ class HomeFragment : Fragment() {
 
       // Apply the adapter to the spinner
       spinner.adapter = adapter
+    }
+
+    binding.homeSettingsButtonImageView.setOnClickListener {
+      navController.navigate(R.id.navigation_settings)
     }
   }
 //  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

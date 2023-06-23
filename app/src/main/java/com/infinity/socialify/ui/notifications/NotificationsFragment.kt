@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.infinity.socialify.R
 import com.infinity.socialify.adapter.NotificationListAdapter
@@ -36,6 +37,11 @@ class NotificationsFragment : Fragment() {
 
     notificationData.addAll(notificationDataList)
     showRecyclerView()
+
+    binding.notificationSettingsButtonImageView.setOnClickListener {
+      val navController = findNavController()
+      navController.navigate(R.id.navigation_settings)
+    }
   }
 
   private val notificationDataList: ArrayList<Notification>
