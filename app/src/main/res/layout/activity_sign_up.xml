@@ -56,6 +56,7 @@
         android:textColor="@color/white"
         android:textColorHint="@color/hint_edit_text"
         android:textSize="13sp"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameTitleTextView" />
 
@@ -83,6 +84,7 @@
         android:textColor="@color/white"
         android:textColorHint="@color/hint_edit_text"
         android:textSize="13sp"
+        android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailTitleTextView" />
 
@@ -142,7 +144,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirmPasswordTitleTextView" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signUpSUButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"

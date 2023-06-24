@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color"
+    tools:context=".FormOnCompleteFragment">
+
+    <TextView
+        android:id="@+id/formOnCompleteTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:text="@string/message_great" />
+
+    <ImageView
+        android:id="@+id/formOnCompleteImageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/formOnCompleteTitleTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_finished_70" />
+
+    <TextView
+        android:id="@+id/formOnCompleteDescriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/formOnCompleteImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="24dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:text="@string/description_form_on_complete" />
+
+    <Button
+        android:id="@+id/formOnCompleteToMenuButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/formOnCompleteDescriptionTextView"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="128dp"
+        android:backgroundTint="@color/secondary_color"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/primary_color"
+        android:text="@string/back_to_community_menu" />
+
+</RelativeLayout>

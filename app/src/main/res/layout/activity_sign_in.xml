@@ -55,6 +55,7 @@
         android:textColor="@color/white"
         android:textColorHint="@color/hint_edit_text"
         android:textSize="13sp"
+        android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailSignInTextView" />
@@ -99,7 +100,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordInputSignInEditText" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/signInSIButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -126,7 +127,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signInSIButton" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/signInWithGoogleButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

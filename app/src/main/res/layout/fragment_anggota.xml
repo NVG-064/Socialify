@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AnggotaFragment"
+    android:background="@color/primary_color">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/memberCommunityAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_color"
+            android:minHeight="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/memberCommunityBackButtonToolbarImageView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_outline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/memberCommunityLabelToolbarTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/secondary_color"
+                android:textSize="20sp"
+                android:text="@string/title_community_members" />
+
+            <ImageView
+                android:id="@+id/memberCommunitySettingsButtonImageView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_gear_64" />
+
+        </Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/cari_anggota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/memberCommunityAppBarLayout"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/squircle_shape"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/baseline_search_24" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/keyword_insert_hint" />
+
+    </LinearLayout>
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list_anggota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cari_anggota"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/cari_anggota"
+        tools:listitem="@layout/list_anggota_komunitas" />
+
+</RelativeLayout>

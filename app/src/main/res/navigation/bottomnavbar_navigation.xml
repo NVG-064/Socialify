@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.infinity.socialify.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_short_info_community"
+            app:destination="@id/navigation_short_info_community" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.infinity.socialify.ui.search.SearchFragment"
+        android:label="@string/search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_navigation_search_to_navigation_search_result2"
+            app:destination="@id/navigation_search_result" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.infinity.socialify.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" >
+        <action
+            android:id="@+id/action_navigation_notifications_to_navigation_detail_post"
+            app:destination="@id/navigation_detail_post" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.infinity.socialify.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_detail_post"
+        android:name="com.infinity.socialify.ui.detail_post.DetailPostFragment"
+        tools:layout="@layout/fragment_detail_post" />
+
+    <fragment
+        android:id="@+id/navigation_short_info_community"
+        android:name="com.infinity.socialify.ClickedCommunityFragment"
+        tools:layout="@layout/fragment_clicked_community" >
+        <action
+            android:id="@+id/action_navigation_short_info_community_to_navigation_join_form_community"
+            app:destination="@id/navigation_join_form_community" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_join_form_community"
+        android:name="com.infinity.socialify.FormGabungFragment"
+        tools:layout="@layout/fragment_form_gabung" >
+        <action
+            android:id="@+id/action_navigation_join_form_community_to_navigation_discussion_community"
+            app:destination="@id/navigation_discussion_community" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_discussion_community"
+        android:name="com.infinity.socialify.CommunityFragment"
+        tools:layout="@layout/fragment_community" >
+        <action
+            android:id="@+id/action_navigation_discussion_community_to_navigation_community_menu"
+            app:destination="@id/navigation_community_menu" />
+        <action
+            android:id="@+id/action_navigation_discussion_community_to_navigation_detail_post"
+            app:destination="@id/navigation_detail_post" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_community_menu"
+        android:name="com.infinity.socialify.MenuKomunitasFragment"
+        tools:layout="@layout/fragment_menu_komunitas" >
+        <action
+            android:id="@+id/action_navigation_community_menu_to_navigation_community_admins_moderators"
+            app:destination="@id/navigation_community_admins_moderators" />
+        <action
+            android:id="@+id/action_navigation_community_menu_to_navigation_community_members"
+            app:destination="@id/navigation_community_members" />
+        <action
+            android:id="@+id/action_navigation_community_menu_to_navigation_community_reviews"
+            app:destination="@id/navigation_community_reviews" />
+        <action
+            android:id="@+id/action_navigation_community_menu_to_nagivation_community_events"
+            app:destination="@id/navigation_community_events" />
+        <action
+            android:id="@+id/action_navigation_community_menu_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_community_menu_to_navigation_community_information"
+            app:destination="@id/navigation_community_information" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_community_members"
+        android:name="com.infinity.socialify.AnggotaFragment"
+        tools:layout="@layout/fragment_anggota" />
+
+    <fragment
+        android:id="@+id/navigation_community_admins_moderators"
+        android:name="com.infinity.socialify.AdminModeratorFragment"
+        tools:layout="@layout/fragment_admin_moderator" />
+
+    <fragment
+        android:id="@+id/navigation_community_events"
+        android:name="com.infinity.socialify.EventFragment"
+        tools:layout="@layout/fragment_event" >
+        <action
+            android:id="@+id/action_nagivation_community_events_to_navigation_community_event_detail"
+            app:destination="@id/navigation_community_event_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_community_event_detail"
+        android:name="com.infinity.socialify.ClickedEventFragment"
+        tools:layout="@layout/fragment_clicked_event" >
+        <action
+            android:id="@+id/action_navigation_community_event_detail_to_navigation_event_on_start"
+            app:destination="@id/navigation_event_on_start" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_community_reviews"
+        android:name="com.infinity.socialify.ReviewKomunitasFragment"
+        tools:layout="@layout/fragment_review_komunitas" >
+        <action
+            android:id="@+id/action_navigation_community_reviews_to_navigation_form_on_complete"
+            app:destination="@id/navigation_form_on_complete" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_search_result"
+        android:name="com.infinity.socialify.SearchResultFragment"
+        tools:layout="@layout/fragment_search_result" >
+        <action
+            android:id="@+id/action_navigation_search_result_to_navigation_short_info_community"
+            app:destination="@id/navigation_short_info_community" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.infinity.socialify.ui.settings.SettingsFragment"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/navigation_form_on_complete"
+        android:name="com.infinity.socialify.FormOnCompleteFragment"
+        tools:layout="@layout/fragment_form_on_complete" />
+
+    <fragment
+        android:id="@+id/navigation_event_on_start"
+        android:name="com.infinity.socialify.EventOnStartFragment"
+        tools:layout="@layout/fragment_event_on_start" />
+
+    <fragment
+        android:id="@+id/navigation_community_information"
+        android:name="com.infinity.socialify.FragmentDeskripsiKomunitas"
+        tools:layout="@layout/fragment_deskripsi_komunitas" />
+
+    <activity
+        android:id="@+id/navigation_explore_interest"
+        android:name="com.infinity.socialify.ui.ExploreActivity"
+        tools:layout="@layout/activity_explore" />
+
+    <activity
+        android:id="@+id/navigation_sign_in"
+        android:name="com.infinity.socialify.SignInActivity"
+        tools:layout="@layout/activity_sign_in" />
+</navigation>

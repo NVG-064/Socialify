@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/profileAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_color"
+            android:minHeight="?attr/actionBarSize">
+
+            <TextView
+                android:id="@+id/profileLabelToolbarTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/secondary_color"
+                android:textSize="20sp"
+                android:text="@string/title_profile" />
+            
+            <ImageView
+                android:id="@+id/profileSettingsButtonImageView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_gear_64" />
+
+        </Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileAppBarLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/coverProfileImageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_bg" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profilePictureCircleImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/coverProfileImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-50dp"
+                android:src="@drawable/abdul_hamid" />
+
+            <TextView
+                android:id="@+id/profileNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_below="@id/profilePictureCircleImageView"
+                android:layout_marginHorizontal="24dp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:textAlignment="center"
+                android:textColor="@color/primary_color"
+                android:textSize="20sp"
+                android:text="@string/name_example_1" />
+
+            <TextView
+                android:id="@+id/profileDescriptionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profileNameTextView"
+                android:layout_marginHorizontal="24dp"
+                android:textAlignment="center"
+                android:textColor="@color/primary_color"
+                android:textSize="12sp"
+                android:text="@string/description_example_1" />
+
+            <LinearLayout
+                android:id="@+id/profileInterestLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_below="@id/profileDescriptionTextView"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_interest_48"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/primary_color"
+                        android:text="@string/title_interest" />
+
+                    <TextView
+                        android:id="@+id/profileInterestTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_color"
+                        android:text="@string/nothing" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profileBirthdayLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_below="@id/profileInterestLinearLayout"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_birthday_48"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/primary_color"
+                        android:text="@string/title_birthdate" />
+
+                    <TextView
+                        android:id="@+id/profileBirthdayTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_color"
+                        android:text="@string/birthdate_example_1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profileBornPlaceLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_below="@id/profileBirthdayLinearLayout"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_born_place_48"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/primary_color"
+                        android:text="@string/title_born_place" />
+
+                    <TextView
+                        android:id="@+id/profileBornPlaceTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_color"
+                        android:text="@string/city_place_example_1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profilePlacedInLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_below="@id/profileBornPlaceLinearLayout"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_city_48"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/primary_color"
+                        android:text="@string/title_city_place" />
+
+                    <TextView
+                        android:id="@+id/profilePlacedInTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_color"
+                        android:text="@string/city_place_example_1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

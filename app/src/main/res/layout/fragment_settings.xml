@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.settings.SettingsFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/settingsAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_color"
+            android:minHeight="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/settingsBackButtonToolbarImageView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_outline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/settingsLabelToolbarTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/secondary_color"
+                android:textSize="20sp"
+                android:text="@string/title_settings" />
+
+        </Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <Button
+        android:id="@+id/settingsChangePasswordButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settingsAppBarLayout"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="24dp"
+        android:backgroundTint="@color/secondary_color"
+        android:textColor="@color/primary_color"
+        android:textAlignment="textStart"
+        android:text="@string/change_password"
+        android:drawableEnd="@drawable/ic_round_arrow_forward_ios_24" />
+
+    <Button
+        android:id="@+id/settingsPrivateAccountButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settingsChangePasswordButton"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="24dp"
+        android:backgroundTint="@color/secondary_color"
+        android:textColor="@color/primary_color"
+        android:textAlignment="textStart"
+        android:text="@string/private_account"
+        android:drawableEnd="@drawable/ic_round_arrow_forward_ios_24" />
+
+    <Button
+        android:id="@+id/settingsSignOutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settingsPrivateAccountButton"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="24dp"
+        android:backgroundTint="@color/red"
+        android:textColor="@color/white"
+        android:textAlignment="textStart"
+        android:text="@string/sign_out"
+        android:drawableEnd="@drawable/ic_round_arrow_forward_ios_24"
+        android:drawableTint="@color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color"
+    tools:context=".ui.home.HomeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/homeAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_color"
+            android:minHeight="?attr/actionBarSize">
+
+            <TextView
+                android:id="@+id/homeLabelToolbarTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/secondary_color"
+                android:textSize="20sp"
+                android:text="@string/title_home" />
+
+            <ImageView
+                android:id="@+id/homeSettingsButtonImageView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_gear_64" />
+
+        </Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homeAppBarLayout"
+        android:layout_centerHorizontal="true"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/createCommunityLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <ImageView
+                        android:id="@+id/createCommunityHomeImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/buat_komunitas"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:text="@string/create_community"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toEndOf="@id/createCommunityHomeImageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/sortByHomeSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/createCommunityLinearLayout"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/leaderboardCommunityFragmentContainerView"
+                android:layout_marginTop="24dp"
+                android:name="com.infinity.socialify.LeaderboardCommunityFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/recommendationCommunityFragmentContainerView"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_recommendation_shape"
+                android:name="com.infinity.socialify.CommunityRecommendationFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

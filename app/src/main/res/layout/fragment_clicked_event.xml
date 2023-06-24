@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ClickedEventFragment"
+    android:background="@color/primary_color">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/eventInfoAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_color"
+            android:minHeight="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/eventInfoBackButtonToolbarImageView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_outline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/eventInfoLabelToolbarTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/secondary_color"
+                android:textSize="20sp"
+                android:text="@string/title_community_events" />
+
+            <ImageView
+                android:id="@+id/eventInfoSettingsButtonImageView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_gear_64" />
+
+        </Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/clicked_event"
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:layout_below="@id/eventInfoAppBarLayout">
+        <ImageView
+            android:id="@+id/img_event_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bg_live"
+            android:scaleType="centerCrop"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/img_profil_host"
+                android:layout_width="82dp"
+                android:layout_height="82dp"
+                android:src="@drawable/profil_user"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="30dp"/>
+            <TextView
+                android:id="@+id/tv_role_event"
+                android:layout_width="58dp"
+                android:layout_height="wrap_content"
+                android:text="Host"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:background="@drawable/squircle_shape"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@id/img_profil_host"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="-10dp"/>
+            <TextView
+                android:id="@+id/tv_nama_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abdul Hamid"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:shadowColor="@color/black"
+                android:shadowRadius="10"
+                app:layout_constraintTop_toBottomOf="@id/tv_role_event"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <TextView
+                android:id="@+id/tv_topik_diskusi"
+                android:layout_width="184dp"
+                android:layout_height="wrap_content"
+                android:text="Ngobrol santai sambil ngoding"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textAlignment="center"
+                android:shadowColor="@color/black"
+                android:shadowRadius="10"
+                app:layout_constraintTop_toBottomOf="@id/tv_nama_user"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="-8dp"/>
+
+            <Button
+                android:id="@+id/btn_gabung_live"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Gabung Live"
+                android:textColor="@color/primary_color"
+                android:backgroundTint="@color/secondary_color"
+                app:layout_constraintTop_toBottomOf="@id/tv_topik_diskusi"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="55dp"/>
+            <Button
+                android:id="@+id/btn_bagikan"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Bagikan"
+                android:textColor="@color/primary_color"
+                android:backgroundTint="@color/secondary_color"
+                app:layout_constraintTop_toBottomOf="@id/tv_topik_diskusi"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="55dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_pembicara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/clicked_event"
+        android:text="Pembicara"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_margin="15dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pembicara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_pembicara"
+        android:layout_margin="15dp">
+
+        <ImageView
+            android:id="@+id/img_profil_pembicara"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            android:src="@drawable/profil_user"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/tv_role_pembicara"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+            android:text="Host"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:background="@drawable/squircle_shape"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/img_profil_pembicara"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="-10dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

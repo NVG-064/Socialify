@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AdminModeratorFragment"
+    android:background="@color/primary_color">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/communityAdminModeratorsAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_color"
+            android:minHeight="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/communityAdminModeratorsBackButtonToolbarImageView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_outline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/communityAdminModeratorsLabelToolbarTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/secondary_color"
+                android:textSize="20sp"
+                android:text="@string/title_community_admin_moderator" />
+
+            <ImageView
+                android:id="@+id/communityAdminModeratorsSettingsButtonImageView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_gear_64" />
+
+        </Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/communityAdminModeratorsAppBarLayout"
+        tools:listitem="@layout/list_admin_komunitas" />
+
+</RelativeLayout>

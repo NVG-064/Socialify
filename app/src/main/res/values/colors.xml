@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<!-- The type of this color is RGBA (Red, Green, Blue, Alpha) -->
+    <!-- The type of this color is RGBA (Red, Green, Blue, Alpha) -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="primary_color">#FF20043F</color>
-    <color name="welcome_screen_next_btn">#a1ffbe3c</color>
-    <color name="secondary_color">#FFBE3C</color>
+    <color name="welcome_screen_next_btn">#A1FFBE3C</color>
+    <color name="secondary_color">#FFFFBE3C</color>
     <color name="progress_bar_bg">#FFCFBEE9</color>
     <color name="tertiary_color">#FF6E3CBC</color>
     <color name="hint_edit_text">#59FFFFFF</color>
+    <color name="btn_peringkat">#FFBA4AFB</color>
+    <color name="another_color">#FF361D52</color>
+    <color name="bg_leaderboard_color">#FF8716CA</color>
+    <color name="bg_notification_color">#E620043F</color>
+    <color name="red">#FFA81919</color>
 </resources>

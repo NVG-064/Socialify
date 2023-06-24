@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24dp"
+    android:background="@drawable/bg_leaderboard_shape"
+    tools:context=".LeaderboardCommunityFragment">
+
+    <TextView
+        android:id="@+id/leaderboardCommunityHomeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/leaderboard_community"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textAlignment="center" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPapanPeringkat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/leaderboardCommunityHomeTextView"
+        tools:itemCount="3"
+        tools:listitem="@layout/list_papan_peringkat" />
+
+</RelativeLayout>
