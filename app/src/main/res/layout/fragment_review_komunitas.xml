@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,11 +7,51 @@
     tools:context=".ReviewKomunitasFragment"
     android:background="@color/primary_color">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/communityReviewAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_color"
+            android:minHeight="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/communityReviewBackButtonToolbarImageView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_outline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/communityReviewLabelToolbarTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/secondary_color"
+                android:textSize="20sp"
+                android:text="@string/title_community_reviews" />
+
+            <ImageView
+                android:id="@+id/communityReviewSettingsButtonImageView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_gear_64" />
+
+        </Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/rating_bintang"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_below="@id/communityReviewAppBarLayout"
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/tv_pertanyaan_satu"
@@ -21,116 +61,64 @@
             android:textColor="@color/white"
             android:textSize="14dp"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_margin="15dp"/>
+            android:layout_margin="24dp"/>
 
-        <ImageView
-            android:id="@+id/img_rating_star"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
+        <RadioGroup
+            android:id="@+id/ratingKomunitasRadioGroup"
             android:src="@drawable/star"
             app:layout_constraintTop_toBottomOf="@id/tv_pertanyaan_satu"
-            android:layout_marginTop="10dp"/>
-
-        <TextView
-            android:id="@+id/tv_rating_status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hebat"
-            android:textColor="@color/white"
-            android:textSize="14dp"
-            app:layout_constraintTop_toBottomOf="@id/img_rating_star"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/rating_yang_disukai"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/rating_bintang"
-        android:layout_marginTop="20dp">
-
-        <TextView
-            android:id="@+id/tv_pertanyaan_dua"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/squircle_shape"
+            android:layout_marginHorizontal="24dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hal apa saja yang kamu sukai di komunitas ini?"
-            android:textColor="@color/white"
-            android:textSize="14dp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_margin="15dp"/>
-        <Button
-            android:id="@+id/btn_disukai_member"
-            android:layout_width="133dp"
-            android:layout_height="40dp"
-            android:text="Member"
-            android:textSize="14dp"
-            app:layout_constraintTop_toBottomOf="@id/tv_pertanyaan_dua"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="60dp"/>
-        <Button
-            android:id="@+id/btn_disukai_admin"
-            android:layout_width="133dp"
-            android:layout_height="40dp"
-            android:text="Admin"
-            android:textSize="14dp"
-            app:layout_constraintTop_toBottomOf="@id/tv_pertanyaan_dua"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="60dp"/>
+            android:orientation="horizontal"
+            android:gravity="center">
 
-        <Button
-            android:id="@+id/btn_disukai_event"
-            android:layout_width="133dp"
-            android:layout_height="40dp"
-            android:text="Event"
-            android:textSize="14dp"
-            app:layout_constraintTop_toBottomOf="@id/btn_disukai_member"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="60dp"/>
-        <Button
-            android:id="@+id/btn_disukai_peraturan"
-            android:layout_width="133dp"
-            android:layout_height="40dp"
-            android:text="Peraturan"
-            android:textSize="14dp"
-            app:layout_constraintTop_toBottomOf="@id/btn_disukai_admin"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="60dp"/>
+            <RadioButton
+                android:id="@+id/communityRating1RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/community_review_stars_1" />
 
-        <Button
-            android:id="@+id/btn_disukai_forum"
-            android:layout_width="133dp"
-            android:layout_height="40dp"
-            android:text="Forum"
-            android:textSize="14dp"
-            app:layout_constraintTop_toBottomOf="@id/btn_disukai_event"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="60dp"/>
-        <Button
-            android:id="@+id/btn_disukai_keamanan"
-            android:layout_width="133dp"
-            android:layout_height="40dp"
-            android:text="Keamanan"
-            android:textSize="14dp"
-            app:layout_constraintTop_toBottomOf="@id/btn_disukai_peraturan"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="60dp"/>
+            <RadioButton
+                android:id="@+id/communityRating2RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="@string/community_review_stars_2" />
+
+            <RadioButton
+                android:id="@+id/communityRating3RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="@string/community_review_stars_3" />
+
+            <RadioButton
+                android:id="@+id/communityRating4RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="@string/community_review_stars_4" />
+
+            <RadioButton
+                android:id="@+id/communityRating5RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="@string/community_review_stars_5" />
+
+        </RadioGroup>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/rating_alasan_disukai"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/rating_yang_disukai"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/rating_bintang">
 
         <TextView
             android:id="@+id/tv_pertanyaan_tiga"
@@ -141,15 +129,22 @@
             android:textSize="14dp"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_margin="15dp"/>
-        
+
         <EditText
             android:id="@+id/et_alasan_disukai"
             android:layout_width="match_parent"
-            android:layout_height="90dp"
-            android:hint="Ketikkan Sesuatu..."
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginHorizontal="24dp"
             android:background="@drawable/squircle_shape"
-            app:layout_constraintTop_toBottomOf="@id/tv_pertanyaan_tiga"
-            android:layout_margin="15dp"/>
+            android:minLines="3"
+            android:lines="6"
+            android:maxLines="8"
+            android:inputType="textMultiLine"
+            android:hint="@string/type_your_answer"
+            android:gravity="top|start"
+            android:scrollbars="vertical"
+            app:layout_constraintTop_toBottomOf="@id/tv_pertanyaan_tiga"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
@@ -159,9 +154,9 @@
         android:text="Kirim Jawaban"
         android:textColor="@color/primary_color"
         android:backgroundTint="@color/secondary_color"
-        app:layout_constraintTop_toBottomOf="@id/rating_alasan_disukai"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="40dp"
-        android:layout_marginRight="15dp"/>
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/rating_alasan_disukai"
+        android:layout_alignParentEnd="true"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -92,6 +92,20 @@
     <string name="title_community_join_request">Permintaan Bergabung</string>
     <string name="title_discussion_forum">Forum Diskusi</string>
     <string name="example_community_title_1">Programmer Forum</string>
+    <string name="title_community_menu">Menu Komunitas</string>
+    <string name="title_community_members">Anggota Komunitas</string>
+    <string name="title_community_admin_moderator"><![CDATA[Admin & Moderator]]></string>
+    <string name="title_community_events">Event Komunitas</string>
+    <string name="title_community_reviews">Peninjauan Komunitas</string>
+    <string name="title_community_exit">Keluar Komunitas</string>
+    <string name="community_review_stars_1">1</string>
+    <string name="community_review_stars_2">2</string>
+    <string name="community_review_stars_3">3</string>
+    <string name="community_review_stars_4">4</string>
+    <string name="community_review_stars_5">5</string>
+    <string name="message_great">Hebat</string>
+    <string name="description_form_on_complete">Kamu telah selesai meninjau komunitas ini. Setiap ulasan akan dipertimbangkan untuk komunitas ini. Kami akan mengirimkan pemberitahuan kepada pemilik dan moderator untuk setiap dampak yang mungkin terjadi.</string>
+    <string name="back_to_community_menu">Kembali ke Menu Komunitas</string>
 
     <integer-array name="data_explore_image">
         <item>@drawable/explore_games</item>

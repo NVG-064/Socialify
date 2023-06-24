@@ -1,23 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MenuKomunitasFragment"
-    android:background="@color/primary_color">
+    android:background="@color/primary_color"
+    tools:context=".MenuKomunitasFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/communityMenuAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_color"
+            android:minHeight="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/communityMenuBackButtonToolbarImageView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_outline_arrow_back_24" />
+
+            <TextView
+                android:id="@+id/communityMenuLabelToolbarTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/secondary_color"
+                android:textSize="20sp"
+                android:text="@string/title_community_menu" />
+
+            <ImageView
+                android:id="@+id/communityMenuSettingsButtonImageView"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_gear_64" />
+
+        </Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/clicked_community"
         android:layout_width="match_parent"
         android:layout_height="170dp"
+        android:layout_below="@id/communityMenuAppBarLayout"
         app:cardBackgroundColor="@color/another_color"
         app:layout_constraintTop_toTopOf="parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/img_komunitas"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
@@ -86,61 +128,90 @@
         android:id="@+id/btn_deskripsi_komunitas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/clicked_community"
-        android:text="Deskripsi Komunitas"
+        android:layout_below="@id/clicked_community"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="15sp"
+        android:text="@string/title_community_information"
         android:textAlignment="viewStart"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginTop="45dp"/>
+        android:layout_marginTop="45dp"
+        android:backgroundTint="@color/tertiary_color"
+        android:drawableEnd="@drawable/ic_community_desc_16" />
+
     <Button
         android:id="@+id/btn_anggota"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btn_deskripsi_komunitas"
-        android:text="Anggota"
+        android:layout_below="@id/btn_deskripsi_komunitas"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="15sp"
+        android:text="@string/title_community_members"
         android:textAlignment="viewStart"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginTop="5dp"/>
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/tertiary_color"
+        android:drawableEnd="@drawable/ic_community_members_16" />
+
     <Button
         android:id="@+id/btn_moderator_admin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btn_anggota"
-        android:text="Admin dan Moderator"
+        android:layout_below="@id/btn_anggota"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="15sp"
+        android:text="@string/title_community_admin_moderator"
         android:textAlignment="viewStart"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginTop="5dp"/>
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/tertiary_color"
+        android:drawableEnd="@drawable/ic_community_admods_16" />
+
     <Button
         android:id="@+id/btn_event"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btn_moderator_admin"
-        android:text="Event"
+        android:layout_below="@id/btn_moderator_admin"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="15sp"
+        android:text="@string/title_community_events"
         android:textAlignment="viewStart"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginTop="5dp"/>
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/tertiary_color"
+        android:drawableEnd="@drawable/ic_community_events_16" />
+
     <Button
         android:id="@+id/btn_review_komunitas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btn_event"
-        android:text="Review Komunitas"
+        android:layout_below="@id/btn_event"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="15sp"
+        android:text="@string/title_community_reviews"
         android:textAlignment="viewStart"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginTop="5dp"/>
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/tertiary_color"
+        android:drawableEnd="@drawable/ic_community_reviews_16" />
+
     <Button
         android:id="@+id/btn_keluar_komunitas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btn_review_komunitas"
-        android:text="Keluar Komunitas"
+        android:layout_below="@id/btn_review_komunitas"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="15sp"
+        android:text="@string/title_community_exit"
         android:textAlignment="viewStart"
-        android:backgroundTint="@color/black"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginTop="5dp"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/red"
+        android:drawableEnd="@drawable/ic_community_exit_16" />
+
+</RelativeLayout>

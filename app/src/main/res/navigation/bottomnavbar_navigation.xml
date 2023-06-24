@@ -100,6 +100,9 @@
         <action
             android:id="@+id/action_navigation_community_menu_to_navigation_home"
             app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_community_menu_to_navigation_community_information"
+            app:destination="@id/navigation_community_information" />
     </fragment>
 
     <fragment
@@ -162,6 +165,11 @@
         android:id="@+id/navigation_event_on_start"
         android:name="com.infinity.socialify.EventOnStartFragment"
         tools:layout="@layout/fragment_event_on_start" />
+
+    <fragment
+        android:id="@+id/navigation_community_information"
+        android:name="com.infinity.socialify.FragmentDeskripsiKomunitas"
+        tools:layout="@layout/fragment_deskripsi_komunitas" />
 
     <activity
         android:id="@+id/navigation_explore_interest"
