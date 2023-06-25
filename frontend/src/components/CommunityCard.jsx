@@ -37,7 +37,7 @@ function CommunityCard() {
                 <div className="flex flex-col items-start justify-center">
                     <div className="flex flex-row justify-center items-center gap-5">
                         <img src={TN} alt="" className="w-[58px] h-auto rounded-[20px]" />
-                        <h1 className="font-bold text-[24px] ">Mahir Programming</h1>
+                        <h1 className="font-bold text-[24px] ">Belajar Bersama</h1>
                         <button className="w-[85px] h-auto px-3 py-2 bg-[#FFBE3F] rounded-[10px] font-semibold">Gabung</button>
                     </div>
                     <p className="text-[20px] mt-2 leading-6">Dapatkan bantuan dari ribuan ahli dan profesional programmer di seluruh Indonesia. Disini kamu bisa mengajukan berbagai pertanyaan seputar programmer yang kamu tidak ketahui.</p>
@@ -59,7 +59,7 @@ function CommunityCard() {
                 <div className="flex flex-col items-start justify-center">
                     <div className="flex flex-row justify-center items-center gap-5">
                         <img src={TN} alt="" className="w-[58px] h-auto rounded-[20px]" />
-                        <h1 className="font-bold text-[24px] ">Mahir Programming</h1>
+                        <h1 className="font-bold text-[24px] ">Belajar Bersama</h1>
                         <button className="w-[85px] h-auto px-3 py-2 bg-[#FFBE3F] rounded-[10px] font-semibold">Gabung</button>
                     </div>
                     <p className="text-[20px] mt-2 leading-6">Dapatkan bantuan dari ribuan ahli dan profesional programmer di seluruh Indonesia. Disini kamu bisa mengajukan berbagai pertanyaan seputar programmer yang kamu tidak ketahui.</p>
@@ -81,7 +81,7 @@ function CommunityCard() {
                 <div className="flex flex-col items-start justify-center">
                     <div className="flex flex-row justify-center items-center gap-5">
                         <img src={TN} alt="" className="w-[58px] h-auto rounded-[20px]" />
-                        <h1 className="font-bold text-[24px] ">Mahir Programming</h1>
+                        <h1 className="font-bold text-[24px] ">Penta Musik Klasik</h1>
                         <button className="w-[85px] h-auto px-3 py-2 bg-[#FFBE3F] rounded-[10px] font-semibold">Gabung</button>
                     </div>
                     <p className="text-[20px] mt-2 leading-6">Dapatkan bantuan dari ribuan ahli dan profesional programmer di seluruh Indonesia. Disini kamu bisa mengajukan berbagai pertanyaan seputar programmer yang kamu tidak ketahui.</p>

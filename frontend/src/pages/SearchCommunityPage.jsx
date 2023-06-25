@@ -29,7 +29,7 @@ const SearchCommunityPage = () => {
                         <button className="bg-white py-3 px-5 flex flex-row gap-[15px] rounded-[20px] text-[20px] items-center w-[250px]"><img src={Icon} alt="" className="w-[50px] h-auto" /> Seni</button>
                     </div>
                     <div className="w-[90%] h-auto gap-5 flex mt-5 items-center justify-center">
-                        <button className="bg-white py-3 px-5 flex flex-row gap-[15px] rounded-[20px] text-[20px] items-center w-[250px]"><img src={Icon} alt="" className="w-[50px] h-auto" /> Eukasi</button>
+                        <button className="bg-white py-3 px-5 flex flex-row gap-[15px] rounded-[20px] text-[20px] items-center w-[250px]"><img src={Icon} alt="" className="w-[50px] h-auto" /> Edukasi</button>
                         <button className="bg-white py-3 px-5 flex flex-row gap-[15px] rounded-[20px] text-[20px] items-center w-[250px]"><img src={Icon} alt="" className="w-[50px] h-auto" /> Olahraga</button>
                         <button className="bg-white py-3 px-5 flex flex-row gap-[15px] rounded-[20px] text-[20px] items-center w-[250px]"><img src={Icon} alt="" className="w-[50px] h-auto" /> Games</button>
                         <button className="bg-white py-3 px-5 flex flex-row gap-[15px] rounded-[20px] text-[20px] items-center w-[250px]"><img src={Icon} alt="" className="w-[50px] h-auto" /> Musik</button>
