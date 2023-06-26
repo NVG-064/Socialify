@@ -23,24 +23,33 @@ function App() {
   return (
     <>
       <Routes>
+        {/* home */}
         <Route path="/" Component={LandingPage} />
+
+        {/* Login, Register, Forgot Password */}
         <Route path="/login" Component={Login} />
         <Route path="/register" Component={RegisterPage} />
         <Route path="/forgot-password" Component={ForgotPass} />
 
-        <Route path="/search-community" Component={SearchCommunityPage} />
-        <Route path="/discussion-page" Component={DiscussionPage} />
-        <Route path="/description-page" Component={DescPage} />
-        <Route path="/member-page" Component={MemberPage} />
-        <Route path="/moderator-page" Component={ModeratorPage} />
-        <Route path="/event-page" Component={CommunityEventPage} />
-        <Route path="/live-audio" Component={Live0} />
-        <Route path="/live-audio/gabung" Component={Live1} />
+        {/* Komunitas */}
+        <Route path="/komunitas" Component={SearchCommunityPage} />
+        <Route path="/komunitas/description" Component={DescPage} />
+        <Route path="/komunitas/member" Component={MemberPage} />
+        <Route path="/komunitas/moderator" Component={ModeratorPage} />
+        <Route path="/komunitas/event" Component={CommunityEventPage} />
+        <Route path="/komunitas/discussion" Component={DiscussionPage} />
 
-        <Route path="/about-profile" Component={AboutProfile} />
-        <Route path="/community-profile" Component={CommunityProfile} />
-        <Route path="/timeline-profile" Component={TimelineProfile} />
+        {/* Event */}
+        <Route path="/event" Component={CommunityEventPage} />
+        <Route path="/event/live-audio" Component={Live0} />
+        <Route path="/event/live-audio/gabung" Component={Live1} />
 
+        {/* User */}
+        <Route path="/user" Component={AboutProfile} />
+        <Route path="/user/community-profile" Component={CommunityProfile} />
+        <Route path="/user/timeline-profile" Component={TimelineProfile} />
+        
+        {/* Not Found */}
         <Route path="*" Component={NotFoundPage} />
       </Routes>
     </>
