@@ -19,6 +19,8 @@ import TimelineProfile from "./pages/CommunityTimelineProfilePage"
 import NotFoundPage from "./pages/NotFoundPage"
 import CommunityEventPage from "./pages/CommunityEventPage"
 import Homepage from "./pages/Homepage"
+import Notifikasi from "./pages/Notification"
+import Eksplor from "./pages/Eksplor"
 
 function App() {
   return (
@@ -31,6 +33,12 @@ function App() {
         <Route path="/login" Component={Login} />
         <Route path="/register" Component={RegisterPage} />
         <Route path="/forgot-password" Component={ForgotPass} />
+
+        {/* explor */}
+        <Route path="/eksplor" Component={Eksplor} />
+
+        {/* Notifikasi */}
+        <Route path="/notifikasi" Component={Notifikasi} />
 
         {/* Home Page After Login */}
         {/* Jaya Route */}
@@ -54,12 +62,12 @@ function App() {
         <Route path="/user" Component={AboutProfile} />
         <Route path="/user/community-profile" Component={CommunityProfile} />
         <Route path="/user/timeline-profile" Component={TimelineProfile} />
-        
+
         {/* Not Found */}
         <Route path="*" Component={NotFoundPage} />
       </Routes>
     </>
-  )
+  );
 }
 
 export default App
