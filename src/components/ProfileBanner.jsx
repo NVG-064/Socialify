@@ -19,9 +19,9 @@ export default function ProfileBanner() {
                     </div>
                     <hr className="border-b-4 border-white max-w-[855px] mx-auto mt-3" />
                     <div className="flex flex-col md:flex-row justify-start gap-3 mt-2.5 pb-5 xl:ml-28 text-center">
-                        <NavLink role="button" to={"/about-profile"} className="bg-white rounded-lg py-0.5 px-5">Tentang</NavLink>
-                        <NavLink role="button" to={"/community-profile"} className="bg-white rounded-lg py-0.5 px-5">Komunitas</NavLink>
-                        <NavLink role="button" to={"/timeline-profile"} className="bg-white rounded-lg py-0.5 px-5">Linimasa</NavLink>
+                        <NavLink role="button" to={"/user"} className="bg-white rounded-lg py-0.5 px-5">Tentang</NavLink>
+                        <NavLink role="button" to={"/user/community-profile"} className="bg-white rounded-lg py-0.5 px-5">Komunitas</NavLink>
+                        <NavLink role="button" to={"/user/timeline-profile"} className="bg-white rounded-lg py-0.5 px-5">Linimasa</NavLink>
                     </div>
                 </div>
             </div>

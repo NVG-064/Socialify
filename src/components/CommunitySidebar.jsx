@@ -18,27 +18,27 @@ export default function CommunitySidebar() {
                     <img className="border-4 rounded-full p-1 " src={gambar} alt="" />
                 </div>
                 <div className="flex flex-col px-8 pb-10">
-                    <button onClick={() => navigate('/description-page')} className="flex justify-between px-3 items-center btn-purple-gradient py-2 my-2 rounded-2xl text-white">
+                    <a href="/komunitas/description" className="flex justify-between px-3 items-center btn-purple-gradient py-2 my-2 rounded-2xl text-white">
                         Deskripsi Komunitas <img src={bulb} alt="" />
-                    </button>
-                    <button onClick={() => navigate('/discussion-page')} className="flex justify-between px-3 items-center btn-purple-gradient py-2 my-2 rounded-2xl text-white">
+                    </a>
+                    <a href="/komunitas/discussion" className="flex justify-between px-3 items-center btn-purple-gradient py-2 my-2 rounded-2xl text-white">
                         Forum Diskusi <img src={komunitas} alt="" />
-                    </button>
-                    <button onClick={() => navigate('/member-page')} className="flex justify-between px-3 items-center btn-purple-gradient py-2 my-2 rounded-2xl text-white">
+                    </a>
+                    <a href="/komunitas/member" className="flex justify-between px-3 items-center btn-purple-gradient py-2 my-2 rounded-2xl text-white">
                         Anggota <img src={doll} alt="" />
-                    </button>
-                    <button onClick={() => navigate('/moderator-page')} className="flex justify-between px-3 items-center btn-purple-gradient py-2 my-2 rounded-2xl text-white">
+                    </a>
+                    <a href="/komunitas/moderator" className="flex justify-between px-3 items-center btn-purple-gradient py-2 my-2 rounded-2xl text-white">
                         Moderator dan Admin <img src={key} alt="" />
-                    </button>
-                    <button onClick={() => navigate('/event-page')} className="flex justify-between px-3 items-center btn-purple-gradient py-2 my-2 rounded-2xl text-white">
+                    </a>
+                    <a href="/komunitas/event" className="flex justify-between px-3 items-center btn-purple-gradient py-2 my-2 rounded-2xl text-white">
                         Event <img src={party} alt="" />
-                    </button>
-                    <button className="flex justify-between px-3 items-center btn-purple-gradient py-2 my-2 rounded-2xl text-white">
+                    </a>
+                    <a className="flex justify-between px-3 items-center btn-purple-gradient py-2 my-2 rounded-2xl text-white">
                         Review Komunitas <img src={check} alt="" />
-                    </button>
-                    <button className="flex justify-between px-3 items-center btn-purple-gradient py-2 my-2 rounded-2xl text-white">
+                    </a>
+                    <a className="flex justify-between px-3 items-center btn-purple-gradient py-2 my-2 rounded-2xl text-white">
                         Keluar Komunitas <img src={logout} alt="" />
-                    </button>
+                    </a>
                 </div>
             </aside>
         </>

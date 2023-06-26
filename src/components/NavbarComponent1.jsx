@@ -5,9 +5,9 @@ import IconProfile from '../assets/icons/icon-profile-circle.svg'
 import ArrowNavbar from '../assets/icons/arrow-navbar.svg'
 
 const navigation = [
-    { name: 'Home', href: '#', current: false },
-    { name: 'Komunitas', href: '#', current: false },
-    { name: 'Event', href: '#', current: false },
+    { name: 'Home', href: '/homepage', current: false },
+    { name: 'Komunitas', href: '/komunitas', current: false },
+    { name: 'Event', href: '/event', current: false },
     { name: 'Jelajahi', href: '#', current: false },
 ]
 
@@ -17,7 +17,7 @@ function classNames(...classes) {
 
 export default function Navbar1() {
     return (
-        <Disclosure as="nav" className="bg-purple-sosialify drop-shadow-xl sticky top-0">
+        <Disclosure as="nav" className="bg-purple-sosialify z-50 drop-shadow-xl sticky top-0">
             {({ open }) => (
                 <>
                     <div className="mx-auto px-2 sm:px-6 lg:px-8">
@@ -55,8 +55,7 @@ export default function Navbar1() {
                                     </div>
                                 </div>
                                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                                    <button
-                                        type="button" className="p-1 text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                                    <button type="button" className="p-1 text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                                         <span className='hidden lg:inline'>Notifikasi</span>
                                     </button>
 
@@ -86,20 +85,10 @@ export default function Navbar1() {
                                                 <Menu.Item>
                                                     {({ active }) => (
                                                         <a
-                                                            href="#"
+                                                            href="/user"
                                                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                                                         >
                                                             Your Profile
-                                                        </a>
-                                                    )}
-                                                </Menu.Item>
-                                                <Menu.Item>
-                                                    {({ active }) => (
-                                                        <a
-                                                            href="#"
-                                                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                                                        >
-                                                            Settings
                                                         </a>
                                                     )}
                                                 </Menu.Item>
