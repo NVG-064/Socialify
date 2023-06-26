@@ -31,6 +31,10 @@ function App() {
         <Route path="/register" Component={RegisterPage} />
         <Route path="/forgot-password" Component={ForgotPass} />
 
+        {/* Home Page After Login */}
+        {/* Jaya Route */}
+        {/* <Route path="" Component={} /> ini bg tinggal di uncomment isi path dan componen sesuai halaman  */}
+
         {/* Komunitas */}
         <Route path="/komunitas" Component={SearchCommunityPage} />
         <Route path="/komunitas/description" Component={DescPage} />
