@@ -34,10 +34,10 @@ function App() {
         {/* Komunitas */}
         <Route path="/komunitas" Component={SearchCommunityPage} />
         <Route path="/komunitas/description" Component={DescPage} />
+        <Route path="/komunitas/discussion" Component={DiscussionPage} />
         <Route path="/komunitas/member" Component={MemberPage} />
         <Route path="/komunitas/moderator" Component={ModeratorPage} />
         <Route path="/komunitas/event" Component={CommunityEventPage} />
-        <Route path="/komunitas/discussion" Component={DiscussionPage} />
 
         {/* Event */}
         <Route path="/event" Component={CommunityEventPage} />

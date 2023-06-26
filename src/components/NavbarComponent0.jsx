@@ -3,8 +3,8 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
     { name: 'Home', href: '#', current: false },
-    { name: 'Komunitas', href: '#', current: false },
-    { name: 'Event', href: '#', current: false },
+    { name: 'Komunitas', href: '/komunitas', current: false },
+    { name: 'Event', href: '/event', current: false },
     { name: 'Jelajahi', href: '#', current: false },
 ]
 
@@ -14,7 +14,7 @@ function classNames(...classes) {
 
 export default function Navbar0() {
     return (
-        <Disclosure as="nav" className="bg-purple-sosialify drop-shadow-xl sticky top-0">
+        <Disclosure as="nav" className="bg-purple-sosialify z-50 drop-shadow-xl sticky top-0">
             {({ open }) => (
                 <>
                     <div className="mx-auto px-2 sm:px-6 lg:px-8">
