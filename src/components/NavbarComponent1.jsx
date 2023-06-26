@@ -160,7 +160,7 @@ export default function Navbar1() {
                               href="/user"
                               className={classNames(
                                 active ? "bg-[#6E3CBC] text-white" : "",
-                                "block px-4 py-2 text-sm"
+                                "block px-4 py-2 text-sm "
                               )}
                             >
                               Your Profile
@@ -173,7 +173,7 @@ export default function Navbar1() {
                               href="#"
                               className={classNames(
                                 active ? "bg-[#6E3CBC] text-white" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
+                                "block px-4 py-2 text-sm "
                               )}
                             >
                               Sign out
