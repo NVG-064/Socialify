@@ -5,7 +5,7 @@ import IconProfile from '../assets/icons/icon-profile-circle.svg'
 import ArrowNavbar from '../assets/icons/arrow-navbar.svg'
 
 const navigation = [
-    { name: 'Home', href: '#', current: false },
+    { name: 'Home', href: '/homepage', current: false },
     { name: 'Komunitas', href: '/komunitas', current: false },
     { name: 'Event', href: '/event', current: false },
     { name: 'Jelajahi', href: '#', current: false },
@@ -55,8 +55,7 @@ export default function Navbar1() {
                                     </div>
                                 </div>
                                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                                    <button
-                                        type="button" className="p-1 text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                                    <button type="button" className="p-1 text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                                         <span className='hidden lg:inline'>Notifikasi</span>
                                     </button>
 

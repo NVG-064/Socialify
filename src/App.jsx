@@ -18,6 +18,7 @@ import CommunityProfile from "./pages/CommunityProfilePage"
 import TimelineProfile from "./pages/CommunityTimelineProfilePage"
 import NotFoundPage from "./pages/NotFoundPage"
 import CommunityEventPage from "./pages/CommunityEventPage"
+import Homepage from "./pages/Homepage"
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
 
         {/* Home Page After Login */}
         {/* Jaya Route */}
+        <Route path="/homepage" Component={Homepage} />
         {/* <Route path="" Component={} /> ini bg tinggal di uncomment isi path dan componen sesuai halaman  */}
 
         {/* Komunitas */}
