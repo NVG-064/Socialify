@@ -17,7 +17,7 @@ const LandingPage = () => {
                             <h1 className="pl-16 text-2xl lg:text-3xl xl:text-3xl font-black text-white text-center tracking-tighter md:w-7/12 leading-tight">Temukan berbagai komunitas bersama Socialify</h1>
                             <h2 className="md:w-8/12 py-4 text-center md:py-8 text-white text-lg lg:text-1xl">Terhubung bersama melalui hobi dan minat yang sama yang tergabung dalam satu komunitas. Membangun komunitas yang nyaman dan struktural bersama-sama.</h2>
                             <div className="pl-16 w-full flex justify-center md:block">
-                                <button className="hover:opacity-90 bg-[#FFBE3F] py-3 px-8 lg:py-3 lg:px-20 rounded-lg text-[#20043F] text-sm md:text-lg f-f-p">Gabung Socialify</button>
+                                <button className="hover:opacity-90 bg-[#FFBE3F] py-3 px-8 lg:py-3 lg:px-24 rounded-lg text-[#20043F] text-sm md:text-lg f-f-p">Gabung Socialify</button>
                             </div>
                             <div>
                                 <h1 className="pl-14 py-8 text-2xl lg:text-2xl xl:text-2xl font-medium text-white text-center tracking-tighter md:w-7/12 leading-tight">Tersedia juga di</h1>
