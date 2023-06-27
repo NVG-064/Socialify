@@ -35,6 +35,12 @@ function App() {
         <Route path="/register" Component={RegisterPage} />
         <Route path="/forgot-password" Component={ForgotPass} />
 
+        {/* explor */}
+        <Route path="/eksplor" Component={Eksplor} />
+
+        {/* Notifikasi */}
+        <Route path="/notifikasi" Component={Notifikasi} />
+
         {/* Home Page After Login */}
         <Route path="/eksplor" Component={Eksplor} />
         <Route path="/homepage" Component={Homepage} />
@@ -62,7 +68,7 @@ function App() {
         <Route path="*" Component={NotFoundPage} />
       </Routes>
     </>
-  )
+  );
 }
 
 export default App
