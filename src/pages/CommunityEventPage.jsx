@@ -21,7 +21,7 @@ const CommunityEventPage = () => {
                                         Akan Berlangsung
                                     </h2>
                                     <div className="flex flex-col lg:grid grid-cols-2 gap-4 justify-items-center m-6">
-                                        <NavLink to="/live-audio">
+                                        <NavLink to="/event/live-audio">
                                             <div>
                                                 <img src={astronot} alt="" />
                                                 <div className="bg-[#FFBE3F] p-4">

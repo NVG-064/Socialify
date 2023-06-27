@@ -1,10 +1,11 @@
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useNavigate } from 'react-router-dom'
 
 const navigation = [
     { name: 'Home', href: '/landingpage', current: false },
-    { name: 'Komunitas', href: '/komunitas', current: false },
-    { name: 'Event', href: '/event', current: false },
+    { name: 'Komunitas', href: '/komunitas-nologin', current: false },
+    { name: 'Event', href: '/event-nologin', current: false },
     { name: 'Jelajahi', href: '#', current: false },
 ]
 
@@ -13,6 +14,8 @@ function classNames(...classes) {
 }
 
 export default function Navbar0() {
+    const navigate = useNavigate()
+
     return (
         <Disclosure as="nav" className="bg-purple-sosialify z-50 drop-shadow-xl sticky top-0">
             {({ open }) => (
@@ -53,11 +56,11 @@ export default function Navbar0() {
                                 </div>
                                 <div className="absolute gap-[10px] inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                                     <button
-                                        type="button" className="p-1 text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                                        onClick={() => navigate('/login')} type="button" className="p-1 text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                                         <span className='hidden lg:inline'>Masuk</span>
                                     </button>
 
-                                    <button className='bg-[#FFBE3F] px-[10px] py-[5px] rounded-[10px]'>Buat Akun</button>
+                                    <button onClick={() => navigate('/register')} className='bg-[#FFBE3F] px-[10px] py-[5px] rounded-[10px]'>Buat Akun</button>
                                 </div>
                             </div>
                         </div>

@@ -1,6 +1,9 @@
 import { Routes, Route } from "react-router-dom"
 
 import LandingPage from "./pages/LandingPage"
+import SearchCommunityNoLoginPage from "./pages/SearchCommunityNoLoginPage"
+import SearchEventNoLogin from "./pages/SearchEventNoLoginPage"
+
 import Login from "./pages/LoginPage"
 import RegisterPage from "./pages/RegisterPage"
 import ForgotPass from "./pages/ForgotPassPage"
@@ -10,10 +13,13 @@ import Eksplor from "./pages/Eksplor"
 import Notifikasi from "./pages/Notification"
 
 import SearchCommunityPage from "./pages/SearchCommunityPage"
-import DiscussionPage from "./pages/CommunityDiscussionForumPage"
+import SearchEvent from "./pages/SearchEventPage"
+
 import DescPage from "./pages/CommunityDescPage"
+import DiscussionPage from "./pages/CommunityDiscussionForumPage"
 import MemberPage from "./pages/CommunityMemberPage"
 import ModeratorPage from "./pages/CommunityModPage"
+import CommunityEventPage from "./pages/CommunityEventPage"
 import Live0 from "./pages/LiveAudioPage0"
 import Live1 from "./pages/LiveAudioPage1"
 
@@ -21,7 +27,6 @@ import AboutProfile from "./pages/CommunityAboutProfilePage"
 import CommunityProfile from "./pages/CommunityProfilePage"
 import TimelineProfile from "./pages/CommunityTimelineProfilePage"
 import NotFoundPage from "./pages/NotFoundPage"
-import CommunityEventPage from "./pages/CommunityEventPage"
 
 function App() {
   return (
@@ -29,6 +34,8 @@ function App() {
       <Routes>
         {/* home */}
         <Route path="/" Component={LandingPage} />
+        <Route path="/komunitas-nologin" Component={SearchCommunityNoLoginPage} />
+        <Route path="/event-nologin" Component={SearchEventNoLogin} />
 
         {/* Login, Register, Forgot Password */}
         <Route path="/login" Component={Login} />
@@ -46,16 +53,18 @@ function App() {
         <Route path="/homepage" Component={Homepage} />
         <Route path="/notifikasi" Component={Notifikasi} />
 
-        {/* Komunitas */}
+        {/* Search */}
         <Route path="/komunitas" Component={SearchCommunityPage} />
+        <Route path="/event" Component={SearchEvent} />
+
+        {/* Komunitas */}
         <Route path="/komunitas/description" Component={DescPage} />
         <Route path="/komunitas/discussion" Component={DiscussionPage} />
         <Route path="/komunitas/member" Component={MemberPage} />
         <Route path="/komunitas/moderator" Component={ModeratorPage} />
-        <Route path="/komunitas/event" Component={CommunityEventPage} />
 
         {/* Event */}
-        <Route path="/event" Component={CommunityEventPage} />
+        <Route path="/komunitas/event" Component={CommunityEventPage} />
         <Route path="/event/live-audio" Component={Live0} />
         <Route path="/event/live-audio/gabung" Component={Live1} />
 

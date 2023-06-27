@@ -76,7 +76,7 @@ export default function MemberPage() {
                                                 <div className="h-24 w-24 p-2.5">
                                                     <img src={Profile} alt="" />
                                                 </div>
-                                                <NavLink to="/about-profile">
+                                                <NavLink to="/user">
                                                     <div className="text-white ml-3">
                                                         <p className="font-semibold">Reza wangsaff</p>
                                                         <p className="text-xs mt-1">

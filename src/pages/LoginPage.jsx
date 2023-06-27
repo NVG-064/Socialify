@@ -21,7 +21,7 @@ export default function LoginPage() {
                     <div className='flex justify-end text-gray-400 py-2'>
                         <NavLink to="/forgot-password" className='text-xs'>Lupa kata sandi?</NavLink>
                     </div>
-                    <button onClick={() => navigate('/search-community')} className='w-full my-5 py-2 bg-yellow-500 text-black shadow-lg shadow-teal-500/50 hover:shadow-teal-500/40 font-semibold rounded-lg'>Masuk</button>
+                    <button onClick={() => navigate('/homepage')} className='w-full my-5 py-2 bg-yellow-500 text-black shadow-lg shadow-teal-500/50 hover:shadow-teal-500/40 font-semibold rounded-lg'>Masuk</button>
 
                 </form>
 

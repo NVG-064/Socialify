@@ -1,11 +1,11 @@
-// import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import Footer from "../components/FooterComponent"
 import Navbar0 from "../components/NavbarComponent0"
 import Hero from "../assets/images/hero.png"
 import Gplay from "../assets/images/gplay.png"
 
 const LandingPage = () => {
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
     return (
         <>
