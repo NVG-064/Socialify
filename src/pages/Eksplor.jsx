@@ -13,93 +13,93 @@ export default function Eksplor() {
                     <h1 className="font-medium text-white text-[25px]">Pilih Hobi dan minat sesuai dengan keinginan kamu</h1>
                 </div>
                 <section className="items-center justify-center px-[10%]">
-                    <div class="tile">
+                    <div className="tile">
                         <input type="checkbox" name="gaming" id="game" />
-                        <label for="game">
+                        <label htmlFor="game">
                             <Icon icon="fluent-emoji:joystick" color="white" width="100px" />
                             <h1>Gaming</h1>
                         </label>
                     </div>
-                    <div class="tile">
+                    <div className="tile">
                         <input type="checkbox" name="sospol" id="sp" />
-                        <label for="sp">
+                        <label htmlFor="sp">
                             <Icon icon="map:political" color="#ffbe3c" width="100" />
                             <h1>Sosial dan Politik</h1>
                         </label>
                     </div>
-                    <div class="tile">
+                    <div className="tile">
                         <input type="checkbox" name="photo" id="pg" />
-                        <label for="pg">
+                        <label htmlFor="pg">
                             <Icon icon="fluent-emoji:camera-with-flash" color="#ffbe3c" width="100" height="100" />
                             <h1>Photography</h1>
                         </label>
                     </div>
-                    <div class="tile">
+                    <div className="tile">
                         <input type="checkbox" name="programming" id="coding" />
-                        <label for="coding">
+                        <label htmlFor="coding">
                             <Icon icon="solar:programming-bold" color="#2bbb07" width="100" height="100" />
                             <h1>Programming</h1>
                         </label>
                     </div>
-                    <div class="tile">
+                    <div className="tile">
                         <input type="checkbox" name="horror" id="hor" />
-                        <label for="hor">
-                        <Icon icon="fluent-emoji:ghost" color="#ff5c00" width="100" height="100" />
+                        <label htmlFor="hor">
+                            <Icon icon="fluent-emoji:ghost" color="#ff5c00" width="100" height="100" />
                             <h1>Horor dan Misteri</h1>
                         </label>
                     </div>
-                    <div class="tile">
+                    <div className="tile">
                         <input type="checkbox" name="hewan" id="hp" />
-                        <label for="hp">
+                        <label htmlFor="hp">
                             <Icon icon="fluent-emoji:cat" width="100" height="100" />
                             <h1>Hewan Peliharaan</h1>
                         </label>
                     </div>
-                    <div class="tile">
+                    <div className="tile">
                         <input type="checkbox" name="alam" id="pa" />
-                        <label for="pa">
+                        <label htmlFor="pa">
                             <Icon icon="fluent-emoji:camping" width="100" height="100" />
                             <h1>Pecinta Alam</h1>
                         </label>
                     </div>
-                    <div class="tile">
+                    <div className="tile">
                         <input type="checkbox" name="kuliner" id="makan" />
-                        <label for="makan">
+                        <label htmlFor="makan">
                             <Icon icon="noto:pot-of-food" width="100" height="100" />
                             <h1>Kuliner</h1>
                         </label>
                     </div>
-                    <div class="tile">
+                    <div className="tile">
                         <input type="checkbox" name="health" id="sehat" />
-                        <label for="sehat">
+                        <label htmlFor="sehat">
                             <Icon icon="ic:twotone-health-and-safety" color="#0085ff" width="100" height="100" />
                             <h1>Kesehatan</h1>
                         </label>
                     </div>
-                    <div class="tile">
+                    <div className="tile">
                         <input type="checkbox" name="olahraga" id="sport" />
-                        <label for="sport">
+                        <label htmlFor="sport">
                             <Icon icon="mdi:youtube-sports" color="#ff5c00" width="100" height="100" />
                             <h1>Olahraga</h1>
                         </label>
                     </div>
-                    <div class="tile">
+                    <div className="tile">
                         <input type="checkbox" name="film" id="fb" />
-                        <label for="fb">
+                        <label htmlFor="fb">
                             <Icon icon="fluent-emoji:movie-camera" color="#ff5c00" width="100" height="100" />
                             <h1>Film dan Buku</h1>
                         </label>
                     </div>
-                    <div class="tile">
+                    <div className="tile">
                         <input type="checkbox" name="belajar" id="learn" />
-                        <label for="learn">
+                        <label htmlFor="learn">
                             <Icon icon="noto:books" color="#ff5c00" width="100" height="100" />
                             <h1>Belajar</h1>
                         </label>
                     </div>
                 </section>
                 <div className="flex flex-col items-center justify-center w-full gap-[10px]">
-                    <button className="text-white text-[20px]">Lewati untuk saat ini</button>
+                    {/* <button className="text-white text-[20px]">Lewati untuk saat ini</button> */}
                     <button className="bg-[#FFBE3F] items-center justify-center w-[30%] rounded-[10px] py-[10px] font-bold text-[20px]">Lanjutkan</button>
                 </div>
             </div>

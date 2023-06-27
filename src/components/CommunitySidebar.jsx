@@ -13,7 +13,7 @@ export default function CommunitySidebar() {
 
     return (
         <>
-            <aside className="bg-purple-sosialify w-full lg:w-80 h-max shadow-md shadow-purple-950 row-span-3 md:sticky top-0">
+            <aside className="bg-purple-sosialify w-full lg:w-80 h-max shadow-md shadow-purple-950 row-span-3 md:sticky top-16">
                 <div className="grid place-content-center py-8">
                     <img className="border-4 rounded-full p-1 " src={gambar} alt="" />
                 </div>

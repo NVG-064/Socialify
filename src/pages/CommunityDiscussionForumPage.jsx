@@ -28,8 +28,7 @@ export default function DiscussionPage() {
                                     action=""
                                     method=""
                                     encType="multipart/form-data"
-                                    className="flex justify-center items-center overflow-hidden rounded-3xl bg-purple-sosialify mb-3 max-md:mx-4 p-5 gap-5"
-                                >
+                                    className="flex justify-center items-center overflow-hidden rounded-3xl bg-purple-sosialify mb-3 max-md:mx-4 p-5 gap-5">
                                     <img width={70} src={Profile} alt="" />
                                     <input
                                         className="rounded-xl p-2 w-4/5 outline-none "

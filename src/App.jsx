@@ -5,6 +5,10 @@ import Login from "./pages/LoginPage"
 import RegisterPage from "./pages/RegisterPage"
 import ForgotPass from "./pages/ForgotPassPage"
 
+import Homepage from "./pages/Homepage"
+import Eksplor from "./pages/Eksplor"
+import Notifikasi from "./pages/Notification"
+
 import SearchCommunityPage from "./pages/SearchCommunityPage"
 import DiscussionPage from "./pages/CommunityDiscussionForumPage"
 import DescPage from "./pages/CommunityDescPage"
@@ -18,7 +22,6 @@ import CommunityProfile from "./pages/CommunityProfilePage"
 import TimelineProfile from "./pages/CommunityTimelineProfilePage"
 import NotFoundPage from "./pages/NotFoundPage"
 import CommunityEventPage from "./pages/CommunityEventPage"
-import Homepage from "./pages/Homepage"
 
 function App() {
   return (
@@ -33,9 +36,9 @@ function App() {
         <Route path="/forgot-password" Component={ForgotPass} />
 
         {/* Home Page After Login */}
-        {/* Jaya Route */}
+        <Route path="/eksplor" Component={Eksplor} />
         <Route path="/homepage" Component={Homepage} />
-        {/* <Route path="" Component={} /> ini bg tinggal di uncomment isi path dan componen sesuai halaman  */}
+        <Route path="/notifikasi" Component={Notifikasi} />
 
         {/* Komunitas */}
         <Route path="/komunitas" Component={SearchCommunityPage} />
@@ -54,7 +57,7 @@ function App() {
         <Route path="/user" Component={AboutProfile} />
         <Route path="/user/community-profile" Component={CommunityProfile} />
         <Route path="/user/timeline-profile" Component={TimelineProfile} />
-        
+
         {/* Not Found */}
         <Route path="*" Component={NotFoundPage} />
       </Routes>

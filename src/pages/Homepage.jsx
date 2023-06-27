@@ -1,4 +1,3 @@
-import React from "react";
 import NavbarComponent1 from "../components/NavbarComponent1";
 import HomepageSidebar from "../components/HomepageSidebar";
 import HomepageLeaderboard from "../components/HomepageLeaderboard";
@@ -24,6 +23,7 @@ export default function Homepage() {
                 </div>
                 <HomepageLeaderboard />
             </div>
+            <Footer />
         </>
     )
 }

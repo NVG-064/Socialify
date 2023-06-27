@@ -18,7 +18,7 @@ export default function Notifikasi() {
                     </div>
                     <button>Tandai sebagai sudah dibaca</button>
                 </div>
-                
+
                 {/*Cards*/}
                 <div className="w-[80%] justify-between flex bg-[#3B2257] mt-[20px] px-[24px] py-[16px] text-white items-center">
                     <div className="flex gap-[30px]">
@@ -28,7 +28,7 @@ export default function Notifikasi() {
                         </div>
                         <div className="flex flex-col w-[80%] gap-[15px]">
                             <h1 className="font-semibold">Asus Syamsudin menyukai  postingan anda:</h1>
-                            <p>“Hai mas bro sekalian, postingan anda bener sekali. Saya sangat sangattt setuju dengan anda"</p>
+                            <p>&quot;Hai mas bro sekalian, postingan anda bener sekali. Saya sangat sangattt setuju dengan anda&quot;</p>
                         </div>
                     </div>
                     <p className="text-[#FFBE3C] text-[12px]">Baru saja</p>
@@ -43,7 +43,7 @@ export default function Notifikasi() {
                         </div>
                         <div className="flex flex-col w-[80%] gap-[15px]">
                             <h1 className="font-semibold">Farhan Kebab mengomentari postingan anda:</h1>
-                            <p>“Hai mas bro sekalian, postingan anda bener sekali. Saya sangat sangattt setuju dengan anda"</p>
+                            <p>&quot;Hai mas bro sekalian, postingan anda bener sekali. Saya sangat sangattt setuju dengan anda&quot;</p>
                         </div>
                     </div>
                     <p className="text-[#FFBE3C] text-[12px]">5 menit yang lalu</p>
@@ -58,7 +58,7 @@ export default function Notifikasi() {
                         </div>
                         <div className="flex flex-col w-[80%] gap-[15px]">
                             <h1 className="font-semibold">Mas bro menyebut anda dalam suatu postingan</h1>
-                            <p>“Hai mas bro sekalian, postingan anda bener sekali. Saya sangat sangattt setuju dengan anda"</p>
+                            <p>&quot;Hai mas bro sekalian, postingan anda bener sekali. Saya sangat sangattt setuju dengan anda&quot;</p>
                         </div>
                     </div>
                     <p className="text-[#FFBE3C] text-[12px]">10 menit yang lalu</p>
@@ -73,7 +73,7 @@ export default function Notifikasi() {
                         </div>
                         <div className="flex flex-col w-[80%] gap-[15px]">
                             <h1 className="font-semibold">Rehan Wangsaff menyukai  postingan anda:</h1>
-                            <p>“Hai mas bro sekalian, postingan anda bener sekali. Saya sangat sangattt setuju dengan anda"</p>
+                            <p>&quot;Hai mas bro sekalian, postingan anda bener sekali. Saya sangat sangattt setuju dengan anda&quot;</p>
                         </div>
                     </div>
                     <p className="text-[#FFBE3C] text-[12px]">30 menit yang lalu</p>
@@ -88,7 +88,7 @@ export default function Notifikasi() {
                         </div>
                         <div className="flex flex-col w-[80%] gap-[15px]">
                             <h1 className="font-semibold">Mas bro menyebut anda dalam suatu postingan</h1>
-                            <p>“Hai mas bro sekalian, postingan anda bener sekali. Saya sangat sangattt setuju dengan anda"</p>
+                            <p>&quot;Hai mas bro sekalian, postingan anda bener sekali. Saya sangat sangattt setuju dengan anda&quot;</p>
                         </div>
                     </div>
                     <p className="text-[#FFBE3C] text-[12px]">1 jam yang lalu</p>
@@ -103,7 +103,7 @@ export default function Notifikasi() {
                         </div>
                         <div className="flex flex-col w-[80%] gap-[15px]">
                             <h1 className="font-semibold">Mas bro menyebut anda dalam suatu postingan</h1>
-                            <p>“Hai mas bro sekalian, postingan anda bener sekali. Saya sangat sangattt setuju dengan anda"</p>
+                            <p>&quot;Hai mas bro sekalian, postingan anda bener sekali. Saya sangat sangattt setuju dengan anda&quot;</p>
                         </div>
                     </div>
                     <p className="text-[#FFBE3C] text-[12px]">10 menit yang lalu</p>
@@ -118,7 +118,7 @@ export default function Notifikasi() {
                         </div>
                         <div className="flex flex-col w-[80%] gap-[15px]">
                             <h1 className="font-semibold">Mas bro menyebut anda dalam suatu postingan</h1>
-                            <p>“Hai mas bro sekalian, postingan anda bener sekali. Saya sangat sangattt setuju dengan anda"</p>
+                            <p>&quot;Hai mas bro sekalian, postingan anda bener sekali. Saya sangat sangattt setuju dengan anda&quot;</p>
                         </div>
                     </div>
                     <p className="text-[#FFBE3C] text-[12px]">10 menit yang lalu</p>
@@ -133,7 +133,7 @@ export default function Notifikasi() {
                         </div>
                         <div className="flex flex-col w-[80%] gap-[15px]">
                             <h1 className="font-semibold">Mas bro menyebut anda dalam suatu postingan</h1>
-                            <p>“Hai mas bro sekalian, postingan anda bener sekali. Saya sangat sangattt setuju dengan anda"</p>
+                            <p>&quot;Hai mas bro sekalian, postingan anda bener sekali. Saya sangat sangattt setuju dengan anda&quot;</p>
                         </div>
                     </div>
                     <p className="text-[#FFBE3C] text-[12px]">10 menit yang lalu</p>
@@ -148,7 +148,7 @@ export default function Notifikasi() {
                         </div>
                         <div className="flex flex-col w-[80%] gap-[15px]">
                             <h1 className="font-semibold">Mas bro menyebut anda dalam suatu postingan</h1>
-                            <p>“Hai mas bro sekalian, postingan anda bener sekali. Saya sangat sangattt setuju dengan anda"</p>
+                            <p>&quot;Hai mas bro sekalian, postingan anda bener sekali. Saya sangat sangattt setuju dengan anda&quot;</p>
                         </div>
                     </div>
                     <p className="text-[#FFBE3C] text-[12px]">10 menit yang lalu</p>
