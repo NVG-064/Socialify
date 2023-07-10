@@ -1,6 +1,8 @@
 package com.infinity.socialify.ui.home
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +13,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.Query
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import com.infinity.socialify.R
 import com.infinity.socialify.adapter.LeaderboardCommunityListAdapter
 import com.infinity.socialify.data.LeaderboardCommunity
@@ -19,6 +25,7 @@ import com.infinity.socialify.databinding.FragmentHomeBinding
 class HomeFragment : Fragment() {
 
   private var _binding: FragmentHomeBinding? = null
+  private lateinit var auth: FirebaseAuth
 //  private var leaderboardCommunityData = ArrayList<LeaderboardCommunity>()
 
   // This property is only valid between onCreateView and
@@ -39,6 +46,18 @@ class HomeFragment : Fragment() {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
+
+//    auth = FirebaseAuth.getInstance()
+//    val db = Firebase.firestore
+//
+//    val communitiesRef = db.collection("communities")
+//
+//    communitiesRef.orderBy("tag").whereEqualTo("tag", "pemrograman").get()
+//      .addOnSuccessListener { result ->
+//        for (document in result) {
+//          Log.d(TAG, "${document.id} = ${document.data}")
+//        }
+//      }
 
     val navController = findNavController()
     val spinner: Spinner = binding.sortByHomeSpinner

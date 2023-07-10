@@ -88,6 +88,7 @@
                 android:id="@+id/createPostLinearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -139,6 +140,15 @@
                     android:text="Urut Berdasarkan"
                     android:textColor="@color/white" />
             </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/frameLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="72dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Tidak ada postingan" />
 
         </RelativeLayout>
 

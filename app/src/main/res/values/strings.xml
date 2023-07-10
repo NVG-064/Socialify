@@ -156,9 +156,9 @@
     </string-array>
 
     <string-array name="data_community_leaderboard_total_members">
-        <item>7.3k anggota</item>
-        <item>10.6k anggota</item>
-        <item>1k anggota</item>
+        <item>7.3k</item>
+        <item>10.6k</item>
+        <item>1k</item>
     </string-array>
 
     <string-array name="data_community_leaderboard_rating">
@@ -168,9 +168,9 @@
     </string-array>
 
     <string-array name="data_community_leaderboard_category">
-        <item>#pemrograman</item>
-        <item>#pemrograman</item>
-        <item>#pemrograman</item>
+        <item>pemrograman</item>
+        <item>pemrograman</item>
+        <item>pemrograman</item>
     </string-array>
 
     <string-array name="sort_by_array">
