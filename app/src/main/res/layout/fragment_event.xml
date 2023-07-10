@@ -92,7 +92,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/poppins_semi_bold"
-                        android:text="Ngobrol santai sambil ngoding"
+                        android:text="Ngobrol Seputar Badminton"
                         android:textSize="16sp"
                         android:textAlignment="center" />
 

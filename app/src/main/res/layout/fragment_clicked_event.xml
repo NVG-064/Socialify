@@ -100,7 +100,7 @@
                 android:id="@+id/tv_topik_diskusi"
                 android:layout_width="184dp"
                 android:layout_height="wrap_content"
-                android:text="Ngobrol santai sambil ngoding"
+                android:text="Ngobrol Seputar Badminton"
                 android:textColor="@color/white"
                 android:textSize="12dp"
                 android:textAlignment="center"
